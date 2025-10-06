@@ -156,7 +156,7 @@ Ce projet permet de :
 
 - **Étudiant :** BOUSSAID Amine  
 - **Module :** Langages du Web – Master 2  
-- **Enseignant :** Mr. Samuel Szoniecky  
+- **Enseignant :** M. Samuel Szoniecky  
 - **Date :** Octobre 2025  
 
 ---
