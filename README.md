@@ -72,28 +72,31 @@ Elle combine plusieurs outils d’intelligence artificielle et de web sémantiqu
 ```mermaid
 classDiagram
     class UTILISATEUR {
-        +int id
+        +int id PK
         +string nom
         +string email
     }
 
     class OBSERVATION {
-        +int id
+        +int id PK
         +Date date
         +string symptome
         +string intensite
         +string transcription
+        +int utilisateur_id FK
     }
 
     class ANALYSE {
-        +int id
+        +int id PK
         +string categorie
         +string resume
         +string recommandations
+        +int observation_id FK
     }
 
     UTILISATEUR "1" --> "0..*" OBSERVATION : enregistre
     OBSERVATION "1" --> "0..*" ANALYSE : produit
+
 
 ```
 
