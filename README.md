@@ -35,7 +35,7 @@ Elle combine plusieurs outils d’intelligence artificielle et de web sémantiqu
    - Permet d’interroger les observations en langage naturel :
      > “Quels symptômes ai-je mentionnés cette semaine ?”  
 
-5. 💾 **Stockage local & interface web (PHP/JS)**  
+5. 💾 **Stockage local & interface web (" "/JS)**  
    - Les données sont enregistrées localement dans une base SQL.  
    - Une interface web permet la visualisation et le suivi.
 
@@ -62,40 +62,38 @@ Elle combine plusieurs outils d’intelligence artificielle et de web sémantiqu
 ### 📊 Tableau de bord
 - Visualisation des données de santé : graphiques, calendriers, tendances.
 
-### 🔐 Respect de la vie privée
-- Tout est stocké localement, aucune donnée n’est envoyée à des serveurs externes.
-
 ---
 
-## 🧩 Diagramme du flux (Mermaid Flowchart)
+## 🧩 Diagramme Entité-Relation (Mermaid ERD)
 
 ```mermaid
-classDiagram
-    class UTILISATEUR {
-        +int id PK
-        +string nom
-        +string email
+erDiagram
+    UTILISATEUR ||--o{ OBSERVATION : enregistre
+    OBSERVATION ||--|{ ANALYSE : produit
+
+    UTILISATEUR {
+        int id
+        string nom
+        string email
     }
 
-    class OBSERVATION {
-        +int id PK
-        +Date date
-        +string symptome
-        +string intensite
-        +string transcription
-        +int utilisateur_id FK
+    OBSERVATION {
+        int id
+        date date
+        string symptome
+        string intensite
+        string transcription
+        int utilisateur_id
     }
 
-    class ANALYSE {
-        +int id PK
-        +string categorie
-        +string resume
-        +string recommandations
-        +int observation_id FK
+    ANALYSE {
+        int id
+        string categorie
+        string resume
+        string recommandations
+        int observation_id
     }
 
-    UTILISATEUR "1" --> "0..*" OBSERVATION : enregistre
-    OBSERVATION "1" --> "0..*" ANALYSE : produit
 
 
 ```
@@ -110,7 +108,7 @@ classDiagram
 | **Ollama** | Reformulation, classification et enrichissement sémantique |
 | **AnythingLLM** | Interrogation et synthèse des observations |
 | **Omeka S** | Gestion et stockage RDF / Turtle |
-| **PHP** | Traitement serveur et gestion des utilisateurs |
+| **..** | Traitement serveur et gestion des utilisateurs |
 | **SQL** | Base de données relationnelle (utilisateurs, observations) |
 | **JavaScript** | Interface dynamique, graphiques, interactions |
 | **Markdown** | Documentation et export des rapports |
@@ -124,12 +122,11 @@ classDiagram
 HealthVoice+/
 ├── README.md
 ├── /frontend
-│   ├── index.html
-│   ├── script.js
-│   └── style.css
+│   ├── views/
+│   ├── scripts/
 ├── /backend
-│   ├── api.php
-│   ├── db.sql
+│   ├── api/
+│   ├── db/
 │   └── rdf/
 │       ├── model.ttl
 │       └── vocabularies/
@@ -147,7 +144,7 @@ HealthVoice+/
 
 Ce projet permet de :
 
-- Manipuler plusieurs **langages du Web** : SQL, PHP, JavaScript, RDF, Markdown.  
+- Manipuler plusieurs **langages du Web** : SQL, .., JavaScript, RDF, Markdown.  
 - Utiliser des outils d’**IA locale** (Whisper, Ollama, AnythingLLM).  
 - Créer une **application sémantique interopérable** avec Omeka S.  
 - Comprendre les liens entre **Web de données** et **Web intelligent**.  
@@ -157,9 +154,9 @@ Ce projet permet de :
 
 ## 📅 Auteurs & contexte
 
-- **Étudiant :** [Ton Nom]  
+- **Étudiant :** BOUSSAID Amine  
 - **Module :** Langages du Web – Master 2  
-- **Enseignant :** Samuel Szoniecky  
+- **Enseignant :** Mr. Samuel Szoniecky  
 - **Date :** Octobre 2025  
 
 ---
