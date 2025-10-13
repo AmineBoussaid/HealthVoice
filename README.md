@@ -35,7 +35,7 @@ Elle combine plusieurs outils d’intelligence artificielle et de web sémantiqu
    - Permet d’interroger les observations en langage naturel :
      > “Quels symptômes ai-je mentionnés cette semaine ?”  
 
-5. 💾 **Stockage local & interface web (" "/JS)**  
+5. 💾 **Stockage local & interface web (PHP/JS)**  
    - Les données sont enregistrées localement dans une base SQL.  
    - Une interface web permet la visualisation et le suivi.
 
@@ -108,7 +108,7 @@ erDiagram
 | **Ollama** | Reformulation, classification et enrichissement sémantique |
 | **AnythingLLM** | Interrogation et synthèse des observations |
 | **Omeka S** | Gestion et stockage RDF / Turtle |
-| **..** | Traitement serveur et gestion des utilisateurs |
+| **PHP** | Traitement serveur et gestion des utilisateurs |
 | **SQL** | Base de données relationnelle (utilisateurs, observations) |
 | **JavaScript** | Interface dynamique, graphiques, interactions |
 | **Markdown** | Documentation et export des rapports |
@@ -144,7 +144,7 @@ HealthVoice+/
 
 Ce projet permet de :
 
-- Manipuler plusieurs **langages du Web** : SQL, .., JavaScript, RDF, Markdown.  
+- Manipuler plusieurs **langages du Web** : SQL, PHP, JavaScript, RDF, Markdown.  
 - Utiliser des outils d’**IA locale** (Whisper, Ollama, AnythingLLM).  
 - Créer une **application sémantique interopérable** avec Omeka S.  
 - Comprendre les liens entre **Web de données** et **Web intelligent**.  
