@@ -119,24 +119,7 @@ erDiagram
 ## 🧱 Architecture du projet
 
 ```
-HealthVoice+/
-├── README.md
-├── /frontend
-│   ├── views/
-│   ├── scripts/
-├── /backend
-│   ├── api/
-│   ├── db/
-│   └── rdf/
-│       ├── model.ttl
-│       └── vocabularies/
-├── /data
-│   ├── audio/
-│   ├── transcriptions/
-│   └── analyses/
-└── /docs
-    └── rapport.md
-```
+
 
 ---
 
@@ -243,7 +226,6 @@ $API_KEY_CREDENTIAL = 'PpNWXhLVJSZ3fHfIX3b0eP6ddAnTZJUN';
 
 1. **Démarrage du serveur** :
    ```bash
-   cd "c:\Mes Documents\paris 8\THYP\Langages du Web\Projets\HealthVoice"
    python -m http.server 8000
    ```
 
@@ -278,14 +260,14 @@ $API_KEY_CREDENTIAL = 'PpNWXhLVJSZ3fHfIX3b0eP6ddAnTZJUN';
 
 ### 📋 Checklist d'implémentation
 
-- [x] Interface responsive avec Bootstrap 5
-- [x] Gestion complète des utilisateurs (CRUD)
-- [x] Gestion complète des observations (CRUD)
-- [x] Gestion complète des analyses (CRUD)
-- [x] Intégration API Omeka S
-- [x] Gestion d'erreurs et messages utilisateur
-- [x] Validation des formulaires
-- [x] Indicateurs de chargement
-- [x] Design moderne et intuitif
+- [ ] Interface responsive avec Bootstrap 5
+- [ ] Gestion complète des utilisateurs (CRUD)
+- [ ] Gestion complète des observations (CRUD)
+- [ ] Gestion complète des analyses (CRUD)
+- [ ] Intégration API Omeka S
+- [ ] Gestion d'erreurs et messages utilisateur
+- [ ] Validation des formulaires
+- [ ] Indicateurs de chargement
+- [ ] Design moderne et intuitif
 - [ ] Tests d'intégration
 - [ ] Documentation utilisateur complète
