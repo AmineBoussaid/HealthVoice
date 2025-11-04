@@ -1,7 +1,7 @@
 <?php
 // proxy.php
 
-$apiUrl = 'https://localhost/omeka-s/api'; // Remplace par ton URL OMK
+$apiUrl = 'https://localhost/omeka-s/api'; 
 $apiKeyIdentity = '98LsLpxqVAHlTqk5ql0gZjazTekis9Br';
 $apiKeyCredential = 'UlCuDAUpaY5UT6p3OF0b1USLNKFuRyZO';
 
