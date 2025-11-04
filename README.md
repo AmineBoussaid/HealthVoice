@@ -18,17 +18,6 @@ Elle combine plusieurs outils d’intelligence artificielle et de web sémantiqu
 
 3. 🗂️ **Omeka S** → Stockage sémantique  
    - Chaque observation devient une ressource RDF décrite en Turtle.  
-   - Exemple :
-     ```turtle
-     @prefix health: <http://example.org/health#> .
-     @prefix schema: <http://schema.org/> .
-
-     health:Observation001
-         a schema:MedicalObservation ;
-         schema:date "2025-10-06" ;
-         schema:symptom "céphalée" ;
-         schema:intensity "moyenne" .
-     ```
 
 4. 🤖 **AnythingLLM** → Analyse et résumé intelligent  
    - Génère des synthèses de l’état de santé sur une période donnée.  
