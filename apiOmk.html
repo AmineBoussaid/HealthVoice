@@ -11,44 +11,264 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 
     <style>
-        .card-hover:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            --info-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --danger-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        body {
+            background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .jumbotron {
+            background: var(--primary-gradient) !important;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            margin-bottom: 1rem;
+        }
+
+        .jumbotron h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .jumbotron .lead {
+            font-size: 0.85rem;
+            margin-bottom: 0;
+        }
+
+        .jumbotron hr {
+            margin: 0.5rem 0 !important;
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            padding: 0.6rem;
+            text-align: center;
             transition: all 0.3s ease;
         }
 
-        .status-badge {
-            font-size: 0.8em;
+        .stat-card:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .stat-card h3 {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 0.2rem;
+        }
+
+        .stat-card i {
+            font-size: 1.2rem !important;
+            margin-bottom: 0.2rem !important;
+        }
+
+        .stat-card p {
+            font-size: 0.75rem;
+            margin-bottom: 0;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .card-header {
+            border: none;
+            font-weight: 600;
+            padding: 0.8rem 1rem;
+            font-size: 1rem;
+        }
+
+        .card-header h5 {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        .bg-primary {
+            background: var(--primary-gradient) !important;
+        }
+
+        .bg-success {
+            background: var(--success-gradient) !important;
+        }
+
+        .bg-info {
+            background: var(--info-gradient) !important;
+        }
+
+        .nav-tabs {
+            border: none;
+            margin-bottom: 1.5rem;
         }
 
         .nav-tabs .nav-link {
             border: none;
             color: #6c757d;
+            padding: 0.6rem 1.2rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border-radius: 10px;
+            margin-right: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-tabs .nav-link:hover {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
         }
 
         .nav-tabs .nav-link.active {
-            background-color: #007bff;
+            background: var(--primary-gradient);
             color: white;
-            border-radius: 5px 5px 0 0;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
         }
 
-        .form-section {
-            background: #f8f9fa;
-            padding: 20px;
+        .form-control, .form-select {
             border-radius: 8px;
-            margin-bottom: 20px;
+            border: 2px solid #e0e0e0;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
         }
 
-        .btn-sm {
-            padding: 0.25rem 0.5rem;
-            font-size: 0.875rem;
+        .form-control:focus, .form-select:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+
+        .btn {
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-success {
+            background: var(--success-gradient);
+            box-shadow: 0 4px 15px rgba(17, 153, 142, 0.3);
+        }
+
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(17, 153, 142, 0.4);
+        }
+
+        .btn-info {
+            background: var(--info-gradient);
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+        }
+
+        .btn-info:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+        }
+
+        .btn-light {
+            background: white;
+            color: #667eea;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .btn-light:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-danger {
+            border: 2px solid #f5576c;
+            color: #f5576c;
+        }
+
+        .btn-outline-danger:hover {
+            background: var(--danger-gradient);
+            border-color: transparent;
+            color: white;
+        }
+
+        .table {
+            border-radius: 8px;
+            overflow: hidden;
+            font-size: 0.9rem;
+        }
+
+        .table thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .table thead th {
+            padding: 0.6rem;
+            font-size: 0.85rem;
+        }
+
+        .table tbody td {
+            padding: 0.6rem;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: rgba(102, 126, 234, 0.1);
+            transform: scale(1.01);
+            transition: all 0.2s ease;
+        }
+
+        .badge {
+            padding: 0.35rem 0.65rem;
+            border-radius: 15px;
+            font-weight: 500;
+            font-size: 0.8rem;
         }
 
         .table-responsive {
-            max-height: 600px;
+            max-height: 450px;
             overflow-y: auto;
+            border-radius: 8px;
+        }
+
+        .table-responsive::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .table-responsive::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .table-responsive::-webkit-scrollbar-thumb {
+            background: #667eea;
+            border-radius: 10px;
         }
 
         .loading {
@@ -58,6 +278,70 @@
         .spinner-border-sm {
             width: 1rem;
             height: 1rem;
+        }
+
+        .alert {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            animation: slideInDown 0.3s ease;
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+        }
+
+        .mb-3 {
+            margin-bottom: 0.8rem !important;
+        }
+
+        .tab-content {
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Animation pour les flèches des formulaires collapsibles */
+        .card-header[data-bs-toggle="collapse"] .bi-chevron-down {
+            transition: transform 0.3s ease;
+        }
+
+        .card-header[data-bs-toggle="collapse"]:not(.collapsed) .bi-chevron-down {
+            transform: rotate(180deg);
+        }
+
+        /* Style pour les cartes de formulaire collapsées */
+        .form-card-collapsed {
+            transition: all 0.3s ease;
+        }
+
+        .form-card-collapsed .card-header {
+            white-space: nowrap;
+        }
+
+        .form-card-collapsed .collapse:not(.show) ~ .card-header h5 {
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -70,24 +354,28 @@
                         <i class="bi bi-heart-pulse"></i> HealthVoice
                     </h1>
                     <p class="lead">Gestion des données médicales via l'API OMK</p>
-                    <hr class="my-4">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <h3 id="stats-utilisateurs">0</h3>
-                            <p>Utilisateurs</p>
+                    <hr class="my-4" style="border-color: rgba(255,255,255,0.3);">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="stat-card">
+                                <i class="bi bi-people"></i>
+                                <h3 id="stats-utilisateurs">0</h3>
+                                <p class="mb-0">Utilisateurs</p>
+                            </div>
                         </div>
-                        <div class="col-md-3">
-                            <h3 id="stats-observations">0</h3>
-                            <p>Observations</p>
+                        <div class="col-md-4">
+                            <div class="stat-card">
+                                <i class="bi bi-journal-medical"></i>
+                                <h3 id="stats-observations">0</h3>
+                                <p class="mb-0">Observations</p>
+                            </div>
                         </div>
-                        <div class="col-md-3">
-                            <h3 id="stats-analyses">0</h3>
-                            <p>Analyses</p>
-                        </div>
-                        <div class="col-md-3">
-                            <button class="btn btn-light" onclick="refreshAllData()">
-                                <i class="bi bi-arrow-repeat"></i> Actualiser
-                            </button>
+                        <div class="col-md-4">
+                            <div class="stat-card">
+                                <i class="bi bi-clipboard-data"></i>
+                                <h3 id="stats-analyses">0</h3>
+                                <p class="mb-0">Analyses</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -116,22 +404,29 @@
             <!-- Utilisateurs Tab -->
             <div class="tab-pane fade show active" id="utilisateurs" role="tabpanel">
                 <div class="row mt-3">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-header bg-primary text-white">
-                                <h5 class="mb-0">
-                                    <i class="bi bi-person-plus"></i> Nouveau Utilisateur
+                    <div class="col-12">
+                        <div class="card form-card-collapsed mb-3">
+                            <div class="card-header bg-primary text-white d-inline-block" style="cursor: pointer; width: auto;" data-bs-toggle="collapse" data-bs-target="#formUtilisateur">
+                                <h5 class="mb-0 d-inline-flex align-items-center">
+                                    <i class="bi bi-person-plus"></i>
+                                    <i class="bi bi-chevron-down ms-2"></i>
                                 </h5>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body collapse" id="formUtilisateur">
                                 <form id="utilisateurForm">
-                                    <div class="mb-3">
-                                        <label for="utilisateurNom" class="form-label">Nom complet *</label>
-                                        <input type="text" class="form-control" id="utilisateurNom" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="utilisateurEmail" class="form-label">Email *</label>
-                                        <input type="email" class="form-control" id="utilisateurEmail" required>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="utilisateurNom" class="form-label">Nom complet *</label>
+                                                <input type="text" class="form-control" id="utilisateurNom" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="utilisateurEmail" class="form-label">Email *</label>
+                                                <input type="email" class="form-control" id="utilisateurEmail" required>
+                                            </div>
+                                        </div>
                                     </div>
                                     <button type="submit" class="btn btn-primary">
                                         <i class="bi bi-check-lg"></i> Créer
@@ -140,15 +435,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-8">
+                </div>
+                <div class="row">
+                    <div class="col-12">
                         <div class="card">
                             <div class="card-header d-flex justify-content-between align-items-center">
                                 <h5 class="mb-0">
                                     <i class="bi bi-list-ul"></i> Liste des Utilisateurs
                                 </h5>
-                                <div class="loading" id="loading-utilisateurs">
-                                    <div class="spinner-border spinner-border-sm text-primary" role="status">
-                                        <span class="visually-hidden">Chargement...</span>
+                                <div class="d-flex align-items-center gap-2">
+                                    <button class="btn btn-sm btn-light" id="btnRefresh">
+                                        <i class="bi bi-arrow-repeat"></i> Actualiser
+                                    </button>
+                                    <div class="loading" id="loading-utilisateurs">
+                                        <div class="spinner-border spinner-border-sm text-primary" role="status">
+                                            <span class="visually-hidden">Chargement...</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -176,51 +478,58 @@
             <!-- Observations Tab -->
             <div class="tab-pane fade" id="observations" role="tabpanel">
                 <div class="row mt-3">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-header bg-success text-white">
-                                <h5 class="mb-0">
-                                    <i class="bi bi-plus-circle"></i> Nouvelle Observation
+                    <div class="col-12">
+                        <div class="card form-card-collapsed mb-3">
+                            <div class="card-header bg-success text-white d-inline-block" style="cursor: pointer; width: auto;" data-bs-toggle="collapse" data-bs-target="#formObservation">
+                                <h5 class="mb-0 d-inline-flex align-items-center">
+                                    <i class="bi bi-plus-circle"></i>
+                                    <i class="bi bi-chevron-down ms-2"></i>
                                 </h5>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body collapse" id="formObservation">
                                 <form id="observationForm">
-                                    <div class="mb-3">
-                                        <label for="observationDate" class="form-label">Date *</label>
-                                        <input type="datetime-local" class="form-control" id="observationDate" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="observationSymptome" class="form-label">Symptôme *</label>
-                                        <select class="form-select" id="observationSymptome" required>
-                                            <option value="">Choisir un symptôme...</option>
-                                            <option value="Toux">Toux</option>
-                                            <option value="Fièvre">Fièvre</option>
-                                            <option value="Fatigue">Fatigue</option>
-                                            <option value="Maux de tête">Maux de tête</option>
-                                            <option value="Nausées">Nausées</option>
-                                            <option value="Douleurs">Douleurs</option>
-                                            <option value="Autre">Autre</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="observationIntensite" class="form-label">Intensité *</label>
-                                        <select class="form-select" id="observationIntensite" required>
-                                            <option value="">Choisir l'intensité...</option>
-                                            <option value="Faible">Faible</option>
-                                            <option value="Modérée">Modérée</option>
-                                            <option value="Forte">Forte</option>
-                                            <option value="Très forte">Très forte</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="observationTranscription" class="form-label">Transcription vocale *</label>
-                                        <textarea class="form-control" id="observationTranscription" rows="3" required></textarea>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="observationUtilisateur" class="form-label">Utilisateur *</label>
-                                        <select class="form-select" id="observationUtilisateur" required>
-                                            <option value="">Choisir un utilisateur...</option>
-                                        </select>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="observationDate" class="form-label">Date *</label>
+                                                <input type="datetime-local" class="form-control" id="observationDate" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="observationSymptome" class="form-label">Symptôme *</label>
+                                                <select class="form-select" id="observationSymptome" required>
+                                                    <option value="">Choisir un symptôme...</option>
+                                                    <option value="Toux">Toux</option>
+                                                    <option value="Fièvre">Fièvre</option>
+                                                    <option value="Fatigue">Fatigue</option>
+                                                    <option value="Maux de tête">Maux de tête</option>
+                                                    <option value="Nausées">Nausées</option>
+                                                    <option value="Douleurs">Douleurs</option>
+                                                    <option value="Autre">Autre</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="observationIntensite" class="form-label">Intensité *</label>
+                                                <select class="form-select" id="observationIntensite" required>
+                                                    <option value="">Choisir l'intensité...</option>
+                                                    <option value="Faible">Faible</option>
+                                                    <option value="Modérée">Modérée</option>
+                                                    <option value="Forte">Forte</option>
+                                                    <option value="Très forte">Très forte</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="observationTranscription" class="form-label">Transcription vocale *</label>
+                                                <textarea class="form-control" id="observationTranscription" rows="5" required></textarea>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="observationUtilisateur" class="form-label">Utilisateur *</label>
+                                                <select class="form-select" id="observationUtilisateur" required>
+                                                    <option value="">Choisir un utilisateur...</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
                                     <button type="submit" class="btn btn-success">
                                         <i class="bi bi-check-lg"></i> Enregistrer
@@ -229,15 +538,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                </div>
+                <div class="row">
+                    <div class="col-12">
                         <div class="card">
                             <div class="card-header d-flex justify-content-between align-items-center">
                                 <h5 class="mb-0">
                                     <i class="bi bi-list-ul"></i> Liste des Observations
                                 </h5>
-                                <div class="loading" id="loading-observations">
-                                    <div class="spinner-border spinner-border-sm text-success" role="status">
-                                        <span class="visually-hidden">Chargement...</span>
+                                <div class="d-flex align-items-center gap-2">
+                                    <button class="btn btn-sm btn-light" id="btnRefreshObs">
+                                        <i class="bi bi-arrow-repeat"></i> Actualiser
+                                    </button>
+                                    <div class="loading" id="loading-observations">
+                                        <div class="spinner-border spinner-border-sm text-success" role="status">
+                                            <span class="visually-hidden">Chargement...</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -266,40 +582,47 @@
             <!-- Analyses Tab -->
             <div class="tab-pane fade" id="analyses" role="tabpanel">
                 <div class="row mt-3">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-header bg-info text-white">
-                                <h5 class="mb-0">
-                                    <i class="bi bi-plus-circle"></i> Nouvelle Analyse
+                    <div class="col-12">
+                        <div class="card form-card-collapsed mb-3">
+                            <div class="card-header bg-info text-white d-inline-block" style="cursor: pointer; width: auto;" data-bs-toggle="collapse" data-bs-target="#formAnalyse">
+                                <h5 class="mb-0 d-inline-flex align-items-center">
+                                    <i class="bi bi-clipboard-data"></i>
+                                    <i class="bi bi-chevron-down ms-2"></i>
                                 </h5>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body collapse" id="formAnalyse">
                                 <form id="analyseForm">
-                                    <div class="mb-3">
-                                        <label for="analyseCategorie" class="form-label">Catégorie *</label>
-                                        <select class="form-select" id="analyseCategorie" required>
-                                            <option value="">Choisir une catégorie...</option>
-                                            <option value="Respiratoire">Respiratoire</option>
-                                            <option value="Cardiovasculaire">Cardiovasculaire</option>
-                                            <option value="Neurologique">Neurologique</option>
-                                            <option value="Digestif">Digestif</option>
-                                            <option value="Général">Général</option>
-                                            <option value="Autre">Autre</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="analyseResume" class="form-label">Résumé *</label>
-                                        <textarea class="form-control" id="analyseResume" rows="3" required></textarea>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="analyseRecommandations" class="form-label">Recommandations *</label>
-                                        <textarea class="form-control" id="analyseRecommandations" rows="3" required></textarea>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="analyseObservation" class="form-label">Observation associée *</label>
-                                        <select class="form-select" id="analyseObservation" required>
-                                            <option value="">Choisir une observation...</option>
-                                        </select>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="analyseCategorie" class="form-label">Catégorie *</label>
+                                                <select class="form-select" id="analyseCategorie" required>
+                                                    <option value="">Choisir une catégorie...</option>
+                                                    <option value="Respiratoire">Respiratoire</option>
+                                                    <option value="Cardiovasculaire">Cardiovasculaire</option>
+                                                    <option value="Neurologique">Neurologique</option>
+                                                    <option value="Digestif">Digestif</option>
+                                                    <option value="Général">Général</option>
+                                                    <option value="Autre">Autre</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="analyseResume" class="form-label">Résumé *</label>
+                                                <textarea class="form-control" id="analyseResume" rows="4" required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="analyseRecommandations" class="form-label">Recommandations *</label>
+                                                <textarea class="form-control" id="analyseRecommandations" rows="4" required></textarea>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="analyseObservation" class="form-label">Observation associée *</label>
+                                                <select class="form-select" id="analyseObservation" required>
+                                                    <option value="">Choisir une observation...</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
                                     <button type="submit" class="btn btn-info">
                                         <i class="bi bi-check-lg"></i> Créer l'analyse
@@ -308,15 +631,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                </div>
+                <div class="row">
+                    <div class="col-12">
                         <div class="card">
                             <div class="card-header d-flex justify-content-between align-items-center">
                                 <h5 class="mb-0">
                                     <i class="bi bi-list-ul"></i> Liste des Analyses
                                 </h5>
-                                <div class="loading" id="loading-analyses">
-                                    <div class="spinner-border spinner-border-sm text-info" role="status">
-                                        <span class="visually-hidden">Chargement...</span>
+                                <div class="d-flex align-items-center gap-2">
+                                    <button class="btn btn-sm btn-light" id="btnRefreshAna">
+                                        <i class="bi bi-arrow-repeat"></i> Actualiser
+                                    </button>
+                                    <div class="loading" id="loading-analyses">
+                                        <div class="spinner-border spinner-border-sm text-info" role="status">
+                                            <span class="visually-hidden">Chargement...</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -346,11 +676,14 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
+    <script type="module">
+        import {auth} from './modules/auth.js';
+        import {pa} from './modules/authParams.js';
+
         // Configuration de l'API OMK via proxy PHP (pour éviter les problèmes CORS)
-        const API_BASE_URL = 'proxy.php';
-        const API_KEY_IDENTITY = '98LsLpxqVAHlTqk5ql0gZjazTekis9Br';
-        const API_KEY_CREDENTIAL = 'UlCuDAUpaY5UT6p3OF0b1USLNKFuRyZO';
+        const API_BASE_URL = 'http://localhost:8000/proxy.php';
+        const API_KEY_IDENTITY = '9kKYaeVduzTk3jbe8zXc9BBdvXK83z46';
+        const API_KEY_CREDENTIAL = 'jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT';
 
         // Headers pour les requêtes API (pas besoin d'authentification côté client avec le proxy)
         const API_HEADERS = {
@@ -361,10 +694,32 @@
         let utilisateurs = [];
         let observations = [];
         let analyses = [];
+        let a;
 
         // Initialisation
         $(document).ready(function() {
+            // Charger les données immédiatement
             loadAllData();
+
+            // Gestionnaire pour le bouton actualiser
+            $('#btnRefresh').on('click', function() {
+                loadAllData();
+            });
+
+            // Gestionnaires pour les boutons actualiser des autres tableaux
+            $('#btnRefreshObs').on('click', function() {
+                loadAllData();
+            });
+
+            $('#btnRefreshAna').on('click', function() {
+                loadAllData();
+            });
+
+            // Gestionnaire pour les boutons de suppression (délégation d'événements)
+            $(document).on('click', '.btn-delete', function() {
+                const itemId = $(this).data('item-id');
+                deleteItem(itemId);
+            });
 
             // Gestionnaires d'événements pour les formulaires
             $('#utilisateurForm').on('submit', handleUtilisateurSubmit);
@@ -398,10 +753,7 @@
             }
         }
 
-        // Fonction pour actualiser toutes les données
-        async function refreshAllData() {
-            await loadAllData();
-        }
+
 
         // Gestionnaires de soumission des formulaires
         async function handleUtilisateurSubmit(e) {
@@ -638,7 +990,7 @@
                         <td>${email}</td>
                         <td>${created}</td>
                         <td>
-                            <button class="btn btn-sm btn-outline-danger" onclick="deleteItem(${user['o:id']})">
+                            <button class="btn btn-sm btn-outline-danger btn-delete" data-item-id="${user['o:id']}">
                                 <i class="bi bi-trash"></i>
                             </button>
                         </td>
@@ -674,7 +1026,7 @@
                         </td>
                         <td>${utilisateur}</td>
                         <td>
-                            <button class="btn btn-sm btn-outline-danger" onclick="deleteItem(${obs['o:id']})">
+                            <button class="btn btn-sm btn-outline-danger btn-delete" data-item-id="${obs['o:id']}">
                                 <i class="bi bi-trash"></i>
                             </button>
                         </td>
@@ -706,7 +1058,7 @@
                         <td>${truncateText(resume, 50)}</td>
                         <td>${observation}</td>
                         <td>
-                            <button class="btn btn-sm btn-outline-danger" onclick="deleteItem(${analyse['o:id']})">
+                            <button class="btn btn-sm btn-outline-danger btn-delete" data-item-id="${analyse['o:id']}">
                                 <i class="bi bi-trash"></i>
                             </button>
                         </td>
@@ -822,17 +1174,22 @@
 
         // Fonctions API
         async function createItem(data) {
-            const response = await fetch(`${API_BASE_URL}/items`, {
-                method: 'POST',
-                headers: API_HEADERS,
-                body: JSON.stringify(data)
-            });
+            try {
+                const response = await fetch(`${API_BASE_URL}/items`, {
+                    method: 'POST',
+                    headers: API_HEADERS,
+                    body: JSON.stringify(data)
+                });
 
-            if (!response.ok) {
-                throw new Error(`Erreur HTTP: ${response.status}`);
+                if (!response.ok) {
+                    throw new Error(`Erreur HTTP: ${response.status}`);
+                }
+
+                return await response.json();
+            } catch (error) {
+                console.error('Erreur lors de la création:', error);
+                throw error;
             }
-
-            return await response.json();
         }
 
         async function deleteItem(itemId) {
@@ -847,6 +1204,8 @@
                 });
 
                 if (!response.ok) {
+                    // Même en cas d'erreur, on actualise car la suppression peut avoir réussi
+                    await loadAllData();
                     throw new Error(`Erreur HTTP: ${response.status}`);
                 }
 
@@ -854,7 +1213,9 @@
                 showAlert('Élément supprimé avec succès', 'success');
             } catch (error) {
                 console.error('Erreur lors de la suppression:', error);
-                showAlert('Erreur lors de la suppression', 'danger');
+                // Actualiser quand même pour vérifier si l'élément a été supprimé
+                await loadAllData();
+                showAlert('La suppression a peut-être échoué. Vérifiez les données.', 'warning');
             }
         }
 
