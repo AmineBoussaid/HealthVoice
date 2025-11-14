@@ -230,8 +230,12 @@
         }
 
         .table thead th {
-            padding: 0.6rem;
-            font-size: 0.85rem;
+            padding: 0.75rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: white !important;
+            border: none;
+            vertical-align: middle;
         }
 
         .table tbody td {
@@ -457,12 +461,13 @@
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-hover" id="utilisateursTable">
-                                        <thead class="table-light">
+                                        <thead>
                                             <tr>
                                                 <th>ID</th>
+                                                <th>Titre</th>
                                                 <th>Nom</th>
                                                 <th>Email</th>
-                                                <th>Créé le</th>
+                                                <th>Date Created</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
@@ -560,7 +565,7 @@
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-hover" id="observationsTable">
-                                        <thead class="table-light">
+                                        <thead>
                                             <tr>
                                                 <th>ID</th>
                                                 <th>Date</th>
@@ -653,12 +658,15 @@
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-hover" id="analysesTable">
-                                        <thead class="table-light">
+                                        <thead>
                                             <tr>
                                                 <th>ID</th>
+                                                <th>Titre</th>
                                                 <th>Catégorie</th>
                                                 <th>Résumé</th>
+                                                <th>Recommandations</th>
                                                 <th>Observation</th>
+                                                <th>Date Created</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
@@ -721,6 +729,13 @@
                 deleteItem(itemId);
             });
 
+            // Gestionnaire pour les boutons de modification
+            $(document).on('click', '.btn-edit', function() {
+                const itemId = $(this).data('item-id');
+                const itemType = $(this).data('type');
+                editItem(itemId, itemType);
+            });
+
             // Gestionnaires d'événements pour les formulaires
             $('#utilisateurForm').on('submit', handleUtilisateurSubmit);
             $('#observationForm').on('submit', handleObservationSubmit);
@@ -759,6 +774,7 @@
         async function handleUtilisateurSubmit(e) {
             e.preventDefault();
 
+            const editId = $('#utilisateurForm').attr('data-edit-id');
             const data = {
                 'dcterms:title': [{
                     type: 'literal',
@@ -785,15 +801,21 @@
             };
 
             try {
-                await createItem(data);
+                if (editId) {
+                    await updateItem(editId, data);
+                    $('#utilisateurForm').removeAttr('data-edit-id');
+                    showAlert('Utilisateur modifié avec succès', 'success');
+                } else {
+                    await createItem(data);
+                    showAlert('Utilisateur créé avec succès', 'success');
+                }
                 $('#utilisateurForm')[0].reset();
                 await loadUtilisateurs();
                 updateStats();
                 populateUserSelects();
-                showAlert('Utilisateur créé avec succès', 'success');
             } catch (error) {
-                console.error('Erreur lors de la création de l\'utilisateur:', error);
-                showAlert('Erreur lors de la création de l\'utilisateur', 'danger');
+                console.error('Erreur:', error);
+                showAlert('Erreur lors de l\'opération', 'danger');
             }
         }
 
@@ -806,6 +828,7 @@
                 return;
             }
 
+            const editId = $('#observationForm').attr('data-edit-id');
             const data = {
                 'dcterms:title': [{
                     type: 'literal',
@@ -846,15 +869,21 @@
             };
 
             try {
-                await createItem(data);
+                if (editId) {
+                    await updateItem(editId, data);
+                    $('#observationForm').removeAttr('data-edit-id');
+                    showAlert('Observation modifiée avec succès', 'success');
+                } else {
+                    await createItem(data);
+                    showAlert('Observation créée avec succès', 'success');
+                }
                 $('#observationForm')[0].reset();
                 await loadObservations();
                 updateStats();
                 populateObservationSelects();
-                showAlert('Observation créée avec succès', 'success');
             } catch (error) {
-                console.error('Erreur lors de la création de l\'observation:', error);
-                showAlert('Erreur lors de la création de l\'observation', 'danger');
+                console.error('Erreur:', error);
+                showAlert('Erreur lors de l\'opération', 'danger');
             }
         }
 
@@ -867,6 +896,7 @@
                 return;
             }
 
+            const editId = $('#analyseForm').attr('data-edit-id');
             const data = {
                 'dcterms:title': [{
                     type: 'literal',
@@ -902,14 +932,20 @@
             };
 
             try {
-                await createItem(data);
+                if (editId) {
+                    await updateItem(editId, data);
+                    $('#analyseForm').removeAttr('data-edit-id');
+                    showAlert('Analyse modifiée avec succès', 'success');
+                } else {
+                    await createItem(data);
+                    showAlert('Analyse créée avec succès', 'success');
+                }
                 $('#analyseForm')[0].reset();
                 await loadAnalyses();
                 updateStats();
-                showAlert('Analyse créée avec succès', 'success');
             } catch (error) {
-                console.error('Erreur lors de la création de l\'analyse:', error);
-                showAlert('Erreur lors de la création de l\'analyse', 'danger');
+                console.error('Erreur:', error);
+                showAlert('Erreur lors de l\'opération', 'danger');
             }
         }
 
@@ -974,22 +1010,27 @@
             tbody.empty();
 
             if (data.length === 0) {
-                tbody.html('<tr><td colspan="5" class="text-center">Aucun utilisateur trouvé</td></tr>');
+                tbody.html('<tr><td colspan="6" class="text-center">Aucun utilisateur trouvé</td></tr>');
                 return;
             }
 
             data.forEach(user => {
+                const titre = getPropertyValue(user, 'dcterms:title') || 'N/A';
                 const nom = getPropertyValue(user, 'hv:nom') || 'N/A';
                 const email = getPropertyValue(user, 'hv:email') || 'N/A';
-                const created = new Date(user['o:created']).toLocaleDateString('fr-FR');
+                const created = user['o:created'] ? new Date(user['o:created']['@value']).toLocaleString('fr-FR') : 'N/A';
 
                 tbody.append(`
                     <tr>
                         <td>${user['o:id']}</td>
+                        <td>${titre}</td>
                         <td>${nom}</td>
                         <td>${email}</td>
                         <td>${created}</td>
                         <td>
+                            <button class="btn btn-sm btn-outline-primary btn-edit me-1" data-item-id="${user['o:id']}" data-type="utilisateur">
+                                <i class="bi bi-pencil"></i>
+                            </button>
                             <button class="btn btn-sm btn-outline-danger btn-delete" data-item-id="${user['o:id']}">
                                 <i class="bi bi-trash"></i>
                             </button>
@@ -1026,6 +1067,9 @@
                         </td>
                         <td>${utilisateur}</td>
                         <td>
+                            <button class="btn btn-sm btn-outline-primary btn-edit me-1" data-item-id="${obs['o:id']}" data-type="observation">
+                                <i class="bi bi-pencil"></i>
+                            </button>
                             <button class="btn btn-sm btn-outline-danger btn-delete" data-item-id="${obs['o:id']}">
                                 <i class="bi bi-trash"></i>
                             </button>
@@ -1040,24 +1084,33 @@
             tbody.empty();
 
             if (data.length === 0) {
-                tbody.html('<tr><td colspan="5" class="text-center">Aucune analyse trouvée</td></tr>');
+                tbody.html('<tr><td colspan="8" class="text-center">Aucune analyse trouvée</td></tr>');
                 return;
             }
 
             data.forEach(analyse => {
+                const titre = getPropertyValue(analyse, 'dcterms:title') || 'N/A';
                 const categorie = getPropertyValue(analyse, 'hv:categorie') || 'N/A';
                 const resume = getPropertyValue(analyse, 'hv:resume') || 'N/A';
+                const recommandations = getPropertyValue(analyse, 'hv:recommandations') || 'N/A';
                 const observation = getObservationTitre(analyse['o:id']) || 'N/A';
+                const created = analyse['o:created'] ? new Date(analyse['o:created']['@value']).toLocaleString('fr-FR') : 'N/A';
 
                 tbody.append(`
                     <tr>
                         <td>${analyse['o:id']}</td>
+                        <td>${titre}</td>
                         <td>
                             <span class="badge bg-info">${categorie}</span>
                         </td>
                         <td>${truncateText(resume, 50)}</td>
+                        <td>${truncateText(recommandations, 50)}</td>
                         <td>${observation}</td>
+                        <td>${created}</td>
                         <td>
+                            <button class="btn btn-sm btn-outline-primary btn-edit me-1" data-item-id="${analyse['o:id']}" data-type="analyse">
+                                <i class="bi bi-pencil"></i>
+                            </button>
                             <button class="btn btn-sm btn-outline-danger btn-delete" data-item-id="${analyse['o:id']}">
                                 <i class="bi bi-trash"></i>
                             </button>
@@ -1189,6 +1242,94 @@
             } catch (error) {
                 console.error('Erreur lors de la création:', error);
                 throw error;
+            }
+        }
+
+        async function updateItem(itemId, data) {
+            try {
+                const response = await fetch(`${API_BASE_URL}/items/${itemId}`, {
+                    method: 'PUT',
+                    headers: API_HEADERS,
+                    body: JSON.stringify(data)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Erreur HTTP: ${response.status}`);
+                }
+
+                return await response.json();
+            } catch (error) {
+                console.error('Erreur lors de la mise à jour:', error);
+                throw error;
+            }
+        }
+
+        async function editItem(itemId, itemType) {
+            try {
+                const response = await fetch(`${API_BASE_URL}/items/${itemId}`, {
+                    headers: API_HEADERS
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Erreur HTTP: ${response.status}`);
+                }
+
+                const item = await response.json();
+
+                // Remplir le formulaire approprié et le déplier
+                if (itemType === 'utilisateur') {
+                    fillUtilisateurForm(item);
+                    $('#formUtilisateur').collapse('show');
+                    $('#utilisateurs-tab').tab('show');
+                } else if (itemType === 'observation') {
+                    fillObservationForm(item);
+                    $('#formObservation').collapse('show');
+                    $('#observations-tab').tab('show');
+                } else if (itemType === 'analyse') {
+                    fillAnalyseForm(item);
+                    $('#formAnalyse').collapse('show');
+                    $('#analyses-tab').tab('show');
+                }
+
+                // Ajouter un attribut data-edit-id au formulaire pour la mise à jour
+                $(`#${itemType}Form`).attr('data-edit-id', itemId);
+                showAlert('Modification en cours. Modifiez les champs et enregistrez.', 'info');
+            } catch (error) {
+                console.error('Erreur lors du chargement de l\'élément:', error);
+                showAlert('Erreur lors du chargement des données', 'danger');
+            }
+        }
+
+        function fillUtilisateurForm(item) {
+            $('#utilisateurNom').val(getPropertyValue(item, 'hv:nom') || '');
+            $('#utilisateurEmail').val(getPropertyValue(item, 'hv:email') || '');
+        }
+
+        function fillObservationForm(item) {
+            const date = getPropertyValue(item, 'hv:dateObservation');
+            if (date) {
+                $('#observationDate').val(date);
+            }
+            $('#observationSymptome').val(getPropertyValue(item, 'hv:symptome') || '');
+            $('#observationIntensite').val(getPropertyValue(item, 'hv:intensite') || '');
+            $('#observationTranscription').val(getPropertyValue(item, 'hv:transcription') || '');
+            
+            // Récupérer l'ID de l'utilisateur lié
+            const utilisateurProp = item['hv:utilisateur'];
+            if (utilisateurProp && utilisateurProp[0] && utilisateurProp[0]['value_resource_id']) {
+                $('#observationUtilisateur').val(utilisateurProp[0]['value_resource_id']);
+            }
+        }
+
+        function fillAnalyseForm(item) {
+            $('#analyseCategorie').val(getPropertyValue(item, 'hv:categorie') || '');
+            $('#analyseResume').val(getPropertyValue(item, 'hv:resume') || '');
+            $('#analyseRecommandations').val(getPropertyValue(item, 'hv:recommandations') || '');
+            
+            // Récupérer l'ID de l'observation liée
+            const observationProp = item['hv:observe'];
+            if (observationProp && observationProp[0] && observationProp[0]['value_resource_id']) {
+                $('#analyseObservation').val(observationProp[0]['value_resource_id']);
             }
         }
 
