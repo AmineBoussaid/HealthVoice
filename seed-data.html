@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthVoice - Génération de données</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 800px;
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .log-item {
+            padding: 0.5rem;
+            margin: 0.25rem 0;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+        .log-success { background: #d4edda; color: #155724; }
+        .log-error { background: #f8d7da; color: #721c24; }
+        .log-info { background: #d1ecf1; color: #0c5460; }
+        .log-warning { background: #fff3cd; color: #856404; }
+        #logContainer {
+            max-height: 500px;
+            overflow-y: auto;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">🌱 Génération de données HealthVoice</h1>
+        <p class="text-muted">Création automatique de 4 items pour chaque classe</p>
+        
+        <button id="btnGenerate" class="btn btn-primary btn-lg w-100 mb-3">
+            🚀 Générer les données
+        </button>
+        
+        <button id="btnExportCSV" class="btn btn-success btn-lg w-100 mb-3" style="display:none;">
+            📥 Télécharger CSV
+        </button>
+        
+        <div id="progress" class="progress mb-3" style="display:none;">
+            <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" 
+                 role="progressbar" style="width: 0%"></div>
+        </div>
+        
+        <div id="logContainer"></div>
+    </div>
+
+    <script>
+        const API_BASE_URL = 'http://localhost:8000/proxy.php';
+        const API_HEADERS = { 'Content-Type': 'application/json' };
+
+        let templateIndex = null;
+        let propIndex = null;
+        let createdUsers = [];
+        let createdObservations = [];
+        let createdAnalyses = [];
+        let allUsersData = [];
+        let allObservationsData = [];
+        let allAnalysesData = [];
+
+        // Résolution dynamique des templates
+        async function loadTemplateIndex() {
+            if (templateIndex) return templateIndex;
+            const resp = await fetch(`${API_BASE_URL}?path=/resource_templates&per_page=1000`);
+            if (!resp.ok) throw new Error(`Erreur templates: ${resp.status}`);
+            const list = await resp.json();
+            templateIndex = {};
+            list.forEach(rt => {
+                const label = rt['o:label'];
+                const tplId = rt['o:id'];
+                const clsId = rt['o:resource_class'] ? rt['o:resource_class']['o:id'] : null;
+                templateIndex[label] = { templateId: tplId, classId: clsId };
+            });
+            return templateIndex;
+        }
+
+        async function getIdsFor(label) {
+            const idx = await loadTemplateIndex();
+            if (!idx[label]) throw new Error(`Template introuvable: ${label}`);
+            return idx[label];
+        }
+
+        // Résolution dynamique des propriétés
+        async function loadPropertyIndex() {
+            if (propIndex) return propIndex;
+            const resp = await fetch(`${API_BASE_URL}?path=/properties&per_page=1000`);
+            if (!resp.ok) throw new Error(`Erreur properties: ${resp.status}`);
+            const list = await resp.json();
+            propIndex = {};
+            list.forEach(p => propIndex[p['o:term']] = p['o:id']);
+            return propIndex;
+        }
+
+        async function getPropId(term) {
+            const idx = await loadPropertyIndex();
+            if (!idx[term]) throw new Error(`Propriété introuvable: ${term}`);
+            return idx[term];
+        }
+
+        // Logging
+        function log(message, type = 'info') {
+            const logContainer = document.getElementById('logContainer');
+            const logItem = document.createElement('div');
+            logItem.className = `log-item log-${type}`;
+            logItem.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            logContainer.appendChild(logItem);
+            logContainer.scrollTop = logContainer.scrollHeight;
+        }
+
+        // Progression
+        function updateProgress(current, total) {
+            const percent = Math.round((current / total) * 100);
+            document.getElementById('progressBar').style.width = `${percent}%`;
+            document.getElementById('progressBar').textContent = `${current}/${total}`;
+        }
+
+        // Création d'item
+        async function createItem(data) {
+            const response = await fetch(`${API_BASE_URL}?path=/items`, {
+                method: 'POST',
+                headers: API_HEADERS,
+                body: JSON.stringify(data)
+            });
+            if (!response.ok) {
+                const error = await response.text();
+                throw new Error(`HTTP ${response.status}: ${error}`);
+            }
+            return await response.json();
+        }
+
+        // Générateurs de données
+        async function createUtilisateur(index) {
+            const { templateId, classId } = await getIdsFor('Utilisateur');
+            const pidTitle = await getPropId('dcterms:title');
+            const pidNom = await getPropId('hv:nom');
+            const pidEmail = await getPropId('hv:email');
+
+            const noms = ['Martin', 'Dubois', 'Bernard', 'Petit'];
+            const prenoms = ['Jean', 'Marie', 'Pierre', 'Sophie'];
+            
+            const data = {
+                'dcterms:title': [{ type: 'literal', property_id: pidTitle, '@value': `Utilisateur ${index}` }],
+                'hv:nom': [{ type: 'literal', property_id: pidNom, '@value': `${prenoms[index-1]} ${noms[index-1]}` }],
+                'hv:email': [{ type: 'literal', property_id: pidEmail, '@value': `user${index}@example.com` }],
+                'o:resource_class': { 'o:id': classId },
+                'o:resource_template': { 'o:id': templateId }
+            };
+
+            return await createItem(data);
+        }
+
+        async function createObservation(index, userId) {
+            const { templateId, classId } = await getIdsFor('Observation');
+            const pidTitle = await getPropId('dcterms:title');
+            const pidDate = await getPropId('hv:dateObservation');
+            const pidSymptome = await getPropId('hv:symptome');
+            const pidIntensite = await getPropId('hv:intensite');
+            const pidTranscription = await getPropId('hv:transcription');
+            const pidUtilisateur = await getPropId('hv:utilisateur');
+
+            const symptomes = ['Toux', 'Fièvre', 'Fatigue', 'Maux de tête'];
+            const intensites = ['Faible', 'Modérée', 'Forte', 'Très forte'];
+            const transcriptions = [
+                'Toux sèche persistante depuis ce matin',
+                'Forte fièvre avec frissons',
+                'Grande fatigue et manque d\'énergie',
+                'Maux de tête intenses au réveil'
+            ];
+
+            const now = new Date();
+            now.setHours(now.getHours() - (index * 6));
+            const dateStr = now.toISOString().slice(0, 16);
+
+            const data = {
+                'dcterms:title': [{ type: 'literal', property_id: pidTitle, '@value': `Observation - ${symptomes[index-1]}` }],
+                'hv:dateObservation': [{ type: 'literal', property_id: pidDate, '@value': dateStr }],
+                'hv:symptome': [{ type: 'literal', property_id: pidSymptome, '@value': symptomes[index-1] }],
+                'hv:intensite': [{ type: 'literal', property_id: pidIntensite, '@value': intensites[index-1] }],
+                'hv:transcription': [{ type: 'literal', property_id: pidTranscription, '@value': transcriptions[index-1] }],
+                'hv:utilisateur': [{ type: 'resource', property_id: pidUtilisateur, value_resource_id: userId }],
+                'o:resource_class': { 'o:id': classId },
+                'o:resource_template': { 'o:id': templateId }
+            };
+
+            return await createItem(data);
+        }
+
+        async function createAnalyse(index, observationId) {
+            const { templateId, classId } = await getIdsFor('Analyse');
+            const pidTitle = await getPropId('dcterms:title');
+            const pidCategorie = await getPropId('hv:categorie');
+            const pidResume = await getPropId('hv:resume');
+            const pidReco = await getPropId('hv:recommandations');
+            const pidObserve = await getPropId('hv:observe');
+
+            const categories = ['Respiratoire', 'Général', 'Général', 'Neurologique'];
+            const resumes = [
+                'Symptômes respiratoires légers sans complications',
+                'Fièvre probablement virale, surveillance nécessaire',
+                'Fatigue importante nécessitant du repos',
+                'Céphalées de tension, pas de signes alarmants'
+            ];
+            const recommandations = [
+                'Repos, hydratation, sirop si besoin',
+                'Paracétamol toutes les 6h, surveiller température',
+                'Repos prolongé, alimentation équilibrée',
+                'Paracétamol au besoin, éviter écrans'
+            ];
+
+            const data = {
+                'dcterms:title': [{ type: 'literal', property_id: pidTitle, '@value': `Analyse - ${categories[index-1]}` }],
+                'hv:categorie': [{ type: 'literal', property_id: pidCategorie, '@value': categories[index-1] }],
+                'hv:resume': [{ type: 'literal', property_id: pidResume, '@value': resumes[index-1] }],
+                'hv:recommandations': [{ type: 'literal', property_id: pidReco, '@value': recommandations[index-1] }],
+                'hv:observe': [{ type: 'resource', property_id: pidObserve, value_resource_id: observationId }],
+                'o:resource_class': { 'o:id': classId },
+                'o:resource_template': { 'o:id': templateId }
+            };
+
+            return await createItem(data);
+        }
+
+        // Export CSV
+        function downloadCSV(data, filename) {
+            const csvContent = data.map(row => row.join(',')).join('\n');
+            const blob = new Blob(['\ufeff' + csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = filename;
+            link.style.display = 'none';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function exportAllCSV() {
+            // CSV Utilisateurs
+            const usersCsv = [
+                ['id', 'titre', 'nom', 'email', 'date_creation'],
+                ...allUsersData.map(u => [
+                    u.id,
+                    u.titre,
+                    u.nom,
+                    u.email,
+                    u.created
+                ])
+            ];
+            downloadCSV(usersCsv, 'utilisateurs.csv');
+            log('✅ utilisateurs.csv téléchargé', 'success');
+
+            // CSV Observations
+            const obsCsv = [
+                ['id', 'titre', 'date_observation', 'symptome', 'intensite', 'transcription', 'utilisateur_id', 'date_creation'],
+                ...allObservationsData.map(o => [
+                    o.id,
+                    o.titre,
+                    o.date,
+                    o.symptome,
+                    o.intensite,
+                    `"${o.transcription.replace(/"/g, '""')}"`,
+                    o.userId,
+                    o.created
+                ])
+            ];
+            downloadCSV(obsCsv, 'observations.csv');
+            log('✅ observations.csv téléchargé', 'success');
+
+            // CSV Analyses
+            const analysesCsv = [
+                ['id', 'titre', 'categorie', 'resume', 'recommandations', 'observation_id', 'date_creation'],
+                ...allAnalysesData.map(a => [
+                    a.id,
+                    a.titre,
+                    a.categorie,
+                    `"${a.resume.replace(/"/g, '""')}"`,
+                    `"${a.recommandations.replace(/"/g, '""')}"`,
+                    a.observationId,
+                    a.created
+                ])
+            ];
+            downloadCSV(analysesCsv, 'analyses.csv');
+            log('✅ analyses.csv téléchargé', 'success');
+        }
+
+        // Processus principal
+        async function generateData() {
+            const btn = document.getElementById('btnGenerate');
+            btn.disabled = true;
+            btn.textContent = '⏳ Génération en cours...';
+            document.getElementById('progress').style.display = 'block';
+            document.getElementById('logContainer').innerHTML = '';
+
+            const totalSteps = 12; // 4 users + 4 obs + 4 analyses
+            let currentStep = 0;
+
+            try {
+                log('🔄 Chargement des templates et propriétés...', 'info');
+                await Promise.all([loadTemplateIndex(), loadPropertyIndex()]);
+                log('✅ Templates et propriétés chargés', 'success');
+
+                // Créer 4 utilisateurs
+                log('👥 Création de 4 utilisateurs...', 'info');
+                createdUsers = [];
+                allUsersData = [];
+                for (let i = 1; i <= 4; i++) {
+                    const user = await createUtilisateur(i);
+                    createdUsers.push(user['o:id']);
+                    allUsersData.push({
+                        id: user['o:id'],
+                        titre: user['dcterms:title'][0]['@value'],
+                        nom: user['hv:nom'][0]['@value'],
+                        email: user['hv:email'][0]['@value'],
+                        created: new Date(user['o:created']['@value']).toLocaleString('fr-FR')
+                    });
+                    log(`✅ Utilisateur ${i} créé (ID: ${user['o:id']})`, 'success');
+                    currentStep++;
+                    updateProgress(currentStep, totalSteps);
+                }
+
+                // Créer 4 observations (une par utilisateur)
+                log('📋 Création de 4 observations...', 'info');
+                createdObservations = [];
+                allObservationsData = [];
+                for (let i = 1; i <= 4; i++) {
+                    const obs = await createObservation(i, createdUsers[i-1]);
+                    createdObservations.push(obs['o:id']);
+                    allObservationsData.push({
+                        id: obs['o:id'],
+                        titre: obs['dcterms:title'][0]['@value'],
+                        date: obs['hv:dateObservation'][0]['@value'],
+                        symptome: obs['hv:symptome'][0]['@value'],
+                        intensite: obs['hv:intensite'][0]['@value'],
+                        transcription: obs['hv:transcription'][0]['@value'],
+                        userId: createdUsers[i-1],
+                        created: new Date(obs['o:created']['@value']).toLocaleString('fr-FR')
+                    });
+                    log(`✅ Observation ${i} créée (ID: ${obs['o:id']})`, 'success');
+                    currentStep++;
+                    updateProgress(currentStep, totalSteps);
+                }
+
+                // Créer 4 analyses (une par observation)
+                log('🔬 Création de 4 analyses...', 'info');
+                allAnalysesData = [];
+                for (let i = 1; i <= 4; i++) {
+                    const analyse = await createAnalyse(i, createdObservations[i-1]);
+                    allAnalysesData.push({
+                        id: analyse['o:id'],
+                        titre: analyse['dcterms:title'][0]['@value'],
+                        categorie: analyse['hv:categorie'][0]['@value'],
+                        resume: analyse['hv:resume'][0]['@value'],
+                        recommandations: analyse['hv:recommandations'][0]['@value'],
+                        observationId: createdObservations[i-1],
+                        created: new Date(analyse['o:created']['@value']).toLocaleString('fr-FR')
+                    });
+                    log(`✅ Analyse ${i} créée (ID: ${analyse['o:id']})`, 'success');
+                    currentStep++;
+                    updateProgress(currentStep, totalSteps);
+                }
+
+                log('🎉 Génération terminée avec succès!', 'success');
+                log(`📊 Total: 4 utilisateurs, 4 observations, 4 analyses`, 'info');
+                
+                // Afficher le bouton d'export CSV
+                document.getElementById('btnExportCSV').style.display = 'block';
+                log('💾 Cliquez sur "Télécharger CSV" pour exporter les données', 'info');
+
+            } catch (error) {
+                log(`❌ Erreur: ${error.message}`, 'error');
+                console.error(error);
+            } finally {
+                btn.disabled = false;
+                btn.textContent = '🔄 Régénérer les données';
+            }
+        }
+
+        document.getElementById('btnGenerate').addEventListener('click', generateData);
+        document.getElementById('btnExportCSV').addEventListener('click', exportAllCSV);
+    </script>
+</body>
+</html>

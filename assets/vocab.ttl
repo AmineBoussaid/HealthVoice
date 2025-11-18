@@ -1,0 +1,93 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix hv: <https://healthvoice.local/onto/hv#> .
+
+<https://healthvoice.local/onto/hv#> a owl:Ontology ;
+    dcterms:title "HealthVoice+ Ontology" ;
+    dcterms:creator "BOUSSAID Amine" ;
+    dcterms:description "Vocabulaire RDF pour le projet HealthVoice+, carnet de santé vocal intelligent." .
+
+# === Classes principales ===
+hv:Utilisateur a rdfs:Class ;
+    rdfs:label "Utilisateur" ;
+    rdfs:comment "Représente un utilisateur de HealthVoice+" ;
+    vs:term_status "experimental" .
+
+hv:Observation a rdfs:Class ;
+    rdfs:label "Observation médicale" ;
+    rdfs:comment "Observation enregistrée par un utilisateur" ;
+    vs:term_status "experimental" .
+
+hv:Analyse a rdfs:Class ;
+    rdfs:label "Analyse médicale" ;
+    rdfs:comment "Analyse basée sur une observation" ;
+    vs:term_status "experimental" .
+
+# === Propriétés principales ===
+hv:nom a rdf:Property ;
+    rdfs:label "Nom de l'utilisateur" ;
+    rdfs:domain hv:Utilisateur ;
+    vs:term_status "experimental" .
+
+hv:email a rdf:Property ;
+    rdfs:label "Email de l'utilisateur" ;
+    rdfs:domain hv:Utilisateur ;
+    vs:term_status "experimental" .
+
+hv:dateObservation a rdf:Property ;
+    rdfs:label "Date de l'observation" ;
+    rdfs:domain hv:Observation ;
+    vs:term_status "experimental" .
+
+hv:symptome a rdf:Property ;
+    rdfs:label "Symptôme" ;
+    rdfs:domain hv:Observation ;
+    vs:term_status "experimental" .
+
+hv:intensite a rdf:Property ;
+    rdfs:label "Intensité du symptôme" ;
+    rdfs:domain hv:Observation ;
+    vs:term_status "experimental" .
+
+hv:transcription a rdf:Property ;
+    rdfs:label "Transcription vocale" ;
+    rdfs:domain hv:Observation ;
+    vs:term_status "experimental" .
+
+hv:utilisateur a rdf:Property ;
+    rdfs:label "Observation faite par l'utilisateur" ;
+    rdfs:domain hv:Observation ;
+    rdfs:range hv:Utilisateur ;
+    vs:term_status "experimental" .
+
+hv:categorie a rdf:Property ;
+    rdfs:label "Catégorie de l'analyse" ;
+    rdfs:domain hv:Analyse ;
+    vs:term_status "experimental" .
+
+hv:resume a rdf:Property ;
+    rdfs:label "Résumé de l'analyse" ;
+    rdfs:domain hv:Analyse ;
+    vs:term_status "experimental" .
+
+hv:recommandations a rdf:Property ;
+    rdfs:label "Recommandations médicales" ;
+    rdfs:domain hv:Analyse ;
+    vs:term_status "experimental" .
+
+hv:observe a rdf:Property ;
+    rdfs:label "Analyse basée sur l'observation" ;
+    rdfs:domain hv:Analyse ;
+    rdfs:range hv:Observation ;
+    vs:term_status "experimental" .
+
+# Enregistrement audio lié à l'observation (Media Omeka S)
+hv:audioRecording a rdf:Property ;
+    rdfs:label "Enregistrement audio" ;
+    rdfs:comment "Lien vers le média audio associé (Omeka S Media)" ;
+    rdfs:domain hv:Observation ;
+    vs:term_status "experimental" .

@@ -1,0 +1,5 @@
+﻿id,titre,date_observation,symptome,intensite,transcription,utilisateur_id,date_creation
+115,Observation - Toux,2025-11-17T18:18,Toux,Faible,"Toux sèche persistante depuis ce matin",111,18/11/2025 01:18:44
+116,Observation - Fièvre,2025-11-17T12:18,Fièvre,Modérée,"Forte fièvre avec frissons",112,18/11/2025 01:18:46
+117,Observation - Fatigue,2025-11-17T06:18,Fatigue,Forte,"Grande fatigue et manque d'énergie",113,18/11/2025 01:18:47
+118,Observation - Maux de tête,2025-11-17T00:18,Maux de tête,Très forte,"Maux de tête intenses au réveil",114,18/11/2025 01:18:48
