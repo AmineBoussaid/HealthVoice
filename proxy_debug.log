@@ -10006,3 +10006,3931 @@ Array
 
 Target URL: http://localhost/omeka-s/api/items?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
 
+--- 2025-11-18 01:28:44 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 01:28:44 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 01:28:45 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 01:28:55 ---
+Method: GET
+Path: /items/119
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items/119
+
+--- 2025-11-18 01:29:18 ---
+Method: PUT
+Path: /items/119
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 523
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+{"dcterms:title":[{"type":"literal","property_id":1,"@value":"Analyse - Général"}],"hv:categorie":[{"type":"literal","property_id":204,"@value":"Général"}],"hv:resume":[{"type":"literal","property_id":205,"@value":"Symptômes respiratoires légers sans complications"}],"hv:recommandations":[{"type":"literal","property_id":206,"@value":"Repos, hydratation, sirop si besoin"}],"hv:observe":[{"type":"resource","property_id":207,"value_resource_id":115}],"o:resource_class":{"o:id":111},"o:resource_template":{"o:id":8}}
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items/119?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 01:29:18 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 01:29:29 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 01:29:30 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 01:29:30 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 01:29:31 ---
+Method: GET
+Path: /items/119
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items/119
+
+--- 2025-11-18 01:29:34 ---
+Method: PUT
+Path: /items/119
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 529
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+{"dcterms:title":[{"type":"literal","property_id":1,"@value":"Analyse - Respiratoire"}],"hv:categorie":[{"type":"literal","property_id":204,"@value":"Respiratoire"}],"hv:resume":[{"type":"literal","property_id":205,"@value":"Symptômes respiratoires légers sans complications"}],"hv:recommandations":[{"type":"literal","property_id":206,"@value":"Repos, hydratation, sirop si besoin"}],"hv:observe":[{"type":"resource","property_id":207,"value_resource_id":115}],"o:resource_class":{"o:id":111},"o:resource_template":{"o:id":8}}
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items/119?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 01:29:35 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 02:05:08 ---
+Method: GET
+Path: /resource_templates?per_page=1000
+Content-Type: N/A
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/resource_templates?per_page=1000
+
+--- 2025-11-18 02:05:09 ---
+Method: GET
+Path: /properties?per_page=1000
+Content-Type: N/A
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/properties?per_page=1000
+
+--- 2025-11-18 02:05:10 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:05:10 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 02:05:11 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 02:05:16 ---
+Method: GET
+Path: /items/127
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items/127
+
+--- 2025-11-18 02:05:19 ---
+Method: GET
+Path: /items/128
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items/128
+
+--- 2025-11-18 02:05:27 ---
+Method: PUT
+Path: /items/128
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 305
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+{"dcterms:title":[{"type":"literal","property_id":1,"@value":"test"}],"hv:nom":[{"type":"literal","property_id":197,"@value":"test"}],"hv:email":[{"type":"literal","property_id":198,"is_public":false,"@value":"boussaidaminefes@gmail.com"}],"o:resource_class":{"o:id":109},"o:resource_template":{"o:id":6}}
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items/128?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:05:27 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:05:30 ---
+Method: GET
+Path: /items/127
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items/127
+
+--- 2025-11-18 02:05:34 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:05:35 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 02:05:36 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 02:05:36 ---
+Method: PUT
+Path: /items/127
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 296
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+{"dcterms:title":[{"type":"literal","property_id":1,"@value":"ttt"}],"hv:nom":[{"type":"literal","property_id":197,"@value":"ttt"}],"hv:email":[{"type":"literal","property_id":198,"is_public":false,"@value":"testttt@example.com"}],"o:resource_class":{"o:id":109},"o:resource_template":{"o:id":6}}
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items/127?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:05:37 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:06:35 ---
+Method: POST
+Path: /items
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 329
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+{"dcterms:title":[{"type":"literal","property_id":1,"@value":"Utilisateur 3"}],"hv:nom":[{"type":"literal","property_id":197,"@value":"ttttttttttt"}],"hv:email":[{"type":"literal","property_id":198,"is_public":false,"@value":"testtttttttttttttttttt@example.com"}],"o:resource_class":{"o:id":109},"o:resource_template":{"o:id":6}}
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:06:36 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:07:07 ---
+Method: GET
+Path: /resource_templates?per_page=1000
+Content-Type: N/A
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/resource_templates?per_page=1000
+
+--- 2025-11-18 02:07:08 ---
+Method: GET
+Path: /properties?per_page=1000
+Content-Type: N/A
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/properties?per_page=1000
+
+--- 2025-11-18 02:07:09 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:07:10 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 02:07:11 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 02:07:46 ---
+Method: DELETE
+Path: /items/127
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items/127?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:07:47 ---
+Method: DELETE
+Path: /items/128
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items/128?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:07:49 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:07:49 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 02:07:50 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 02:07:50 ---
+Method: DELETE
+Path: /items/129
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items/129?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:07:51 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:07:52 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 02:07:53 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 02:07:53 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:07:54 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 02:07:54 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 02:07:55 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:07:55 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 02:07:56 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 02:07:56 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:07:57 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 02:07:57 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 02:07:58 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:07:58 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 02:07:59 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 02:09:23 ---
+Method: POST
+Path: /items
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 315
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+{"dcterms:title":[{"type":"literal","property_id":1,"@value":"Utilisateur 1"}],"hv:nom":[{"type":"literal","property_id":197,"@value":"ttt"}],"hv:email":[{"type":"literal","property_id":198,"@value":"boussaidaminefes@gmail.com","o:is_public":false}],"o:resource_class":{"o:id":109},"o:resource_template":{"o:id":6}}
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:09:24 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:09:35 ---
+Method: POST
+Path: /items
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 306
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+{"dcterms:title":[{"type":"literal","property_id":1,"@value":"Utilisateur 2"}],"hv:nom":[{"type":"literal","property_id":197,"@value":"tste"}],"hv:email":[{"type":"literal","property_id":198,"@value":"test@example.com","o:is_public":false}],"o:resource_class":{"o:id":109},"o:resource_template":{"o:id":6}}
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:09:36 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:09:39 ---
+Method: DELETE
+Path: /items/130
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items/130?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:09:41 ---
+Method: DELETE
+Path: /items/130
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items/130?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:09:42 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:09:43 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 02:09:44 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 02:09:44 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:09:45 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 02:09:46 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 02:09:46 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:09:47 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 02:09:48 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 02:09:49 ---
+Method: DELETE
+Path: /items/131
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items/131?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:09:50 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:09:51 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 02:09:51 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 02:09:52 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:09:52 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 02:09:53 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 02:09:53 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:09:54 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 02:09:54 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 02:09:59 ---
+Method: GET
+Path: /resource_templates?per_page=1000
+Content-Type: N/A
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/seed-data.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/resource_templates?per_page=1000
+
+--- 2025-11-18 02:09:59 ---
+Method: GET
+Path: /properties?per_page=1000
+Content-Type: N/A
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/seed-data.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/properties?per_page=1000
+
+--- 2025-11-18 02:10:00 ---
+Method: POST
+Path: /items
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 294
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/seed-data.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+{"dcterms:title":[{"type":"literal","property_id":1,"@value":"Utilisateur 1"}],"hv:nom":[{"type":"literal","property_id":197,"@value":"Jean Martin"}],"hv:email":[{"type":"literal","property_id":198,"@value":"user1@example.com"}],"o:resource_class":{"o:id":109},"o:resource_template":{"o:id":6}}
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:10:01 ---
+Method: POST
+Path: /items
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 295
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/seed-data.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+{"dcterms:title":[{"type":"literal","property_id":1,"@value":"Utilisateur 2"}],"hv:nom":[{"type":"literal","property_id":197,"@value":"Marie Dubois"}],"hv:email":[{"type":"literal","property_id":198,"@value":"user2@example.com"}],"o:resource_class":{"o:id":109},"o:resource_template":{"o:id":6}}
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:10:02 ---
+Method: POST
+Path: /items
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 297
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/seed-data.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+{"dcterms:title":[{"type":"literal","property_id":1,"@value":"Utilisateur 3"}],"hv:nom":[{"type":"literal","property_id":197,"@value":"Pierre Bernard"}],"hv:email":[{"type":"literal","property_id":198,"@value":"user3@example.com"}],"o:resource_class":{"o:id":109},"o:resource_template":{"o:id":6}}
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:10:03 ---
+Method: POST
+Path: /items
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 295
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/seed-data.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+{"dcterms:title":[{"type":"literal","property_id":1,"@value":"Utilisateur 4"}],"hv:nom":[{"type":"literal","property_id":197,"@value":"Sophie Petit"}],"hv:email":[{"type":"literal","property_id":198,"@value":"user4@example.com"}],"o:resource_class":{"o:id":109},"o:resource_template":{"o:id":6}}
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:10:04 ---
+Method: POST
+Path: /items
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 568
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/seed-data.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+{"dcterms:title":[{"type":"literal","property_id":1,"@value":"Observation - Toux"}],"hv:dateObservation":[{"type":"literal","property_id":199,"@value":"2025-11-17T19:10"}],"hv:symptome":[{"type":"literal","property_id":200,"@value":"Toux"}],"hv:intensite":[{"type":"literal","property_id":201,"@value":"Faible"}],"hv:transcription":[{"type":"literal","property_id":202,"@value":"Toux sèche persistante depuis ce matin"}],"hv:utilisateur":[{"type":"resource","property_id":203,"value_resource_id":132}],"o:resource_class":{"o:id":110},"o:resource_template":{"o:id":7}}
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:10:05 ---
+Method: POST
+Path: /items
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 565
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/seed-data.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+{"dcterms:title":[{"type":"literal","property_id":1,"@value":"Observation - Fièvre"}],"hv:dateObservation":[{"type":"literal","property_id":199,"@value":"2025-11-17T13:10"}],"hv:symptome":[{"type":"literal","property_id":200,"@value":"Fièvre"}],"hv:intensite":[{"type":"literal","property_id":201,"@value":"Modérée"}],"hv:transcription":[{"type":"literal","property_id":202,"@value":"Forte fièvre avec frissons"}],"hv:utilisateur":[{"type":"resource","property_id":203,"value_resource_id":133}],"o:resource_class":{"o:id":110},"o:resource_template":{"o:id":7}}
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:10:06 ---
+Method: POST
+Path: /items
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 569
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/seed-data.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+{"dcterms:title":[{"type":"literal","property_id":1,"@value":"Observation - Fatigue"}],"hv:dateObservation":[{"type":"literal","property_id":199,"@value":"2025-11-17T07:10"}],"hv:symptome":[{"type":"literal","property_id":200,"@value":"Fatigue"}],"hv:intensite":[{"type":"literal","property_id":201,"@value":"Forte"}],"hv:transcription":[{"type":"literal","property_id":202,"@value":"Grande fatigue et manque d'énergie"}],"hv:utilisateur":[{"type":"resource","property_id":203,"value_resource_id":134}],"o:resource_class":{"o:id":110},"o:resource_template":{"o:id":7}}
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:10:07 ---
+Method: POST
+Path: /items
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 585
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/seed-data.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+{"dcterms:title":[{"type":"literal","property_id":1,"@value":"Observation - Maux de tête"}],"hv:dateObservation":[{"type":"literal","property_id":199,"@value":"2025-11-17T01:10"}],"hv:symptome":[{"type":"literal","property_id":200,"@value":"Maux de tête"}],"hv:intensite":[{"type":"literal","property_id":201,"@value":"Très forte"}],"hv:transcription":[{"type":"literal","property_id":202,"@value":"Maux de tête intenses au réveil"}],"hv:utilisateur":[{"type":"resource","property_id":203,"value_resource_id":135}],"o:resource_class":{"o:id":110},"o:resource_template":{"o:id":7}}
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:10:08 ---
+Method: POST
+Path: /items
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 529
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/seed-data.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+{"dcterms:title":[{"type":"literal","property_id":1,"@value":"Analyse - Respiratoire"}],"hv:categorie":[{"type":"literal","property_id":204,"@value":"Respiratoire"}],"hv:resume":[{"type":"literal","property_id":205,"@value":"Symptômes respiratoires légers sans complications"}],"hv:recommandations":[{"type":"literal","property_id":206,"@value":"Repos, hydratation, sirop si besoin"}],"hv:observe":[{"type":"resource","property_id":207,"value_resource_id":136}],"o:resource_class":{"o:id":111},"o:resource_template":{"o:id":8}}
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:10:09 ---
+Method: POST
+Path: /items
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 541
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/seed-data.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+{"dcterms:title":[{"type":"literal","property_id":1,"@value":"Analyse - Général"}],"hv:categorie":[{"type":"literal","property_id":204,"@value":"Général"}],"hv:resume":[{"type":"literal","property_id":205,"@value":"Fièvre probablement virale, surveillance nécessaire"}],"hv:recommandations":[{"type":"literal","property_id":206,"@value":"Paracétamol toutes les 6h, surveiller température"}],"hv:observe":[{"type":"resource","property_id":207,"value_resource_id":137}],"o:resource_class":{"o:id":111},"o:resource_template":{"o:id":8}}
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:10:11 ---
+Method: POST
+Path: /items
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 519
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/seed-data.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+{"dcterms:title":[{"type":"literal","property_id":1,"@value":"Analyse - Général"}],"hv:categorie":[{"type":"literal","property_id":204,"@value":"Général"}],"hv:resume":[{"type":"literal","property_id":205,"@value":"Fatigue importante nécessitant du repos"}],"hv:recommandations":[{"type":"literal","property_id":206,"@value":"Repos prolongé, alimentation équilibrée"}],"hv:observe":[{"type":"resource","property_id":207,"value_resource_id":138}],"o:resource_class":{"o:id":111},"o:resource_template":{"o:id":8}}
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:10:12 ---
+Method: POST
+Path: /items
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 529
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/seed-data.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+{"dcterms:title":[{"type":"literal","property_id":1,"@value":"Analyse - Neurologique"}],"hv:categorie":[{"type":"literal","property_id":204,"@value":"Neurologique"}],"hv:resume":[{"type":"literal","property_id":205,"@value":"Céphalées de tension, pas de signes alarmants"}],"hv:recommandations":[{"type":"literal","property_id":206,"@value":"Paracétamol au besoin, éviter écrans"}],"hv:observe":[{"type":"resource","property_id":207,"value_resource_id":139}],"o:resource_class":{"o:id":111},"o:resource_template":{"o:id":8}}
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:10:21 ---
+Method: GET
+Path: /resource_templates?per_page=1000
+Content-Type: N/A
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/resource_templates?per_page=1000
+
+--- 2025-11-18 02:10:22 ---
+Method: GET
+Path: /properties?per_page=1000
+Content-Type: N/A
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/properties?per_page=1000
+
+--- 2025-11-18 02:10:22 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:10:23 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 02:10:24 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 02:10:31 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:10:32 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 02:10:32 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
+--- 2025-11-18 02:11:02 ---
+Method: POST
+Path: /items
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7IPkAo7khbmsGAUU
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+Content-Length: 673
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7IPkAo7khbmsGAUU
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+    [data] => {"dcterms:title":[{"type":"literal","property_id":1,"@value":"Observation - Fièvre"}],"hv:dateObservation":[{"type":"literal","property_id":199,"@value":"2025-11-18T02:10"}],"hv:symptome":[{"type":"literal","property_id":200,"@value":"Fièvre"}],"hv:intensite":[{"type":"literal","property_id":201,"@value":"Faible"}],"hv:transcription":[{"type":"literal","property_id":202,"@value":"ttt"}],"hv:utilisateur":[{"type":"resource","property_id":203,"value_resource_id":132}],"o:resource_class":{"o:id":110},"o:resource_template":{"o:id":7}}
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:11:03 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 02:11:06 ---
+Method: DELETE
+Path: /items/144
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: http://localhost:8000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items/144?key_identity=9kKYaeVduzTk3jbe8zXc9BBdvXK83z46&key_credential=jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT
+
+--- 2025-11-18 02:11:07 ---
+Method: GET
+Path: /items?resource_template_id=6
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=6
+
+--- 2025-11-18 02:11:08 ---
+Method: GET
+Path: /items?resource_template_id=7
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=7
+
+--- 2025-11-18 02:11:09 ---
+Method: GET
+Path: /items?resource_template_id=8
+Content-Type: application/json
+--- Headers ---
+Host: localhost:8000
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8000/apiOmk.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,ar;q=0.6
+Cookie: b8bc1e26ae4f54844a68a1cc98faa75a=6k8hmu6octcbpsg30ke6cd0t6m
+--- POST Data ---
+Array
+(
+)
+
+--- FILES Data ---
+Array
+(
+)
+
+--- Raw Input ---
+
+-------------------
+
+Target URL: http://localhost/omeka-s/api/items?resource_template_id=8
+
