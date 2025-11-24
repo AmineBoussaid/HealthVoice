@@ -1724,25 +1724,48 @@
                     'o:resource_template': { 'o:id': templateId }
                 };
 
-                // Si un nouveau fichier audio est fourni, utiliser la méthode avec FormData
+                // 1. Mise à jour des métadonnées de l'item
+                await apiPut(`/items/${itemId}`, data);
+
+                // 2. Si un nouveau fichier audio est fourni
                 if (audioFile) {
-                    data['o:media'] = [{
+                    // a. Supprimer les anciens médias liés à cet item
+                    try {
+                        const item = await apiGet(`/items/${itemId}`);
+                        if (item['o:media'] && item['o:media'].length > 0) {
+                            for (const mediaRef of item['o:media']) {
+                                await apiDelete(`/media/${mediaRef['o:id']}`);
+                            }
+                        }
+                    } catch (e) {
+                        console.warn("Impossible de supprimer les anciens médias", e);
+                    }
+
+                    // b. Ajouter le nouveau média
+                    const mediaData = {
                         'o:ingester': 'upload',
-                        'file_index': 0
-                    }];
+                        'file_index': 0,
+                        'o:item': {'o:id': itemId},
+                        'dcterms:title': [{
+                            'type': 'literal',
+                            'property_id': pidTitle,
+                            '@value': `Audio - ${symptome}`
+                        }]
+                    };
+
                     const formData = new FormData();
-                    formData.append('data', JSON.stringify(data));
+                    formData.append('data', JSON.stringify(mediaData));
                     formData.append('file[0]', audioFile, 'observation.webm');
-                    await apiPostForm(`/items/${itemId}`, formData);
-                } else {
-                    await apiPut(`/items/${itemId}`, data);
+                    
+                    await apiPostForm('/media', formData);
                 }
 
                 showAlert('Observation modifiée avec succès', 'success');
-                refreshPage();
             } catch (error) {
                 console.error('Erreur:', error);
                 showAlert('Erreur lors de la modification : ' + error.message, 'danger');
+            } finally {
+                await loadAllData();
             }
         }
 
