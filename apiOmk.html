@@ -9,10 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- D3.js -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- Recorder CSS -->
     <link rel="stylesheet" href="./assets/css/recorder.css">
 
@@ -328,7 +324,6 @@
             }
         }
 
-        /* Animation pour les flèches des formulaires collapsibles */
         .card-header[data-bs-toggle="collapse"] .bi-chevron-down {
             transition: transform 0.3s ease;
         }
@@ -337,7 +332,6 @@
             transform: rotate(180deg);
         }
 
-        /* Style pour les cartes de formulaire collapsées */
         .form-card-collapsed {
             transition: all 0.3s ease;
         }
@@ -415,6 +409,7 @@
                             <div class="card-header bg-primary text-white d-inline-block" style="cursor: pointer; width: auto;" data-bs-toggle="collapse" data-bs-target="#formUtilisateur">
                                 <h5 class="mb-0 d-inline-flex align-items-center">
                                     <i class="bi bi-person-plus"></i>
+                                    <span class="ms-2">Nouvel Utilisateur</span>
                                     <i class="bi bi-chevron-down ms-2"></i>
                                 </h5>
                             </div>
@@ -490,6 +485,7 @@
                             <div class="card-header bg-success text-white d-inline-block" style="cursor: pointer; width: auto;" data-bs-toggle="collapse" data-bs-target="#formObservation">
                                 <h5 class="mb-0 d-inline-flex align-items-center">
                                     <i class="bi bi-plus-circle"></i>
+                                    <span class="ms-2">Nouvelle Observation</span>
                                     <i class="bi bi-chevron-down ms-2"></i>
                                 </h5>
                             </div>
@@ -609,6 +605,7 @@
                             <div class="card-header bg-info text-white d-inline-block" style="cursor: pointer; width: auto;" data-bs-toggle="collapse" data-bs-target="#formAnalyse">
                                 <h5 class="mb-0 d-inline-flex align-items-center">
                                     <i class="bi bi-clipboard-data"></i>
+                                    <span class="ms-2">Nouvelle Analyse</span>
                                     <i class="bi bi-chevron-down ms-2"></i>
                                 </h5>
                             </div>
@@ -698,45 +695,414 @@
         </div>
     </div>
 
+    <!-- Modals pour modification -->
+    <!-- Modal Modifier Utilisateur -->
+    <div class="modal fade" id="modalEditUser" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="bi bi-pencil"></i> Modifier Utilisateur</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editUserForm">
+                        <input type="hidden" id="editUserId">
+                        <div class="mb-3">
+                            <label for="editUserTitre" class="form-label">Titre *</label>
+                            <input type="text" class="form-control" id="editUserTitre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editUserNom" class="form-label">Nom complet *</label>
+                            <input type="text" class="form-control" id="editUserNom" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editUserEmail" class="form-label">Email *</label>
+                            <input type="email" class="form-control" id="editUserEmail" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-primary" id="btnSaveUser">
+                        <i class="bi bi-check-lg"></i> Enregistrer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Modifier Observation -->
+    <div class="modal fade" id="modalEditObs" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title"><i class="bi bi-pencil"></i> Modifier Observation</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editObsForm">
+                        <input type="hidden" id="editObsId">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="editObsDate" class="form-label">Date *</label>
+                                    <input type="datetime-local" class="form-control" id="editObsDate" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="editObsSymptome" class="form-label">Symptôme *</label>
+                                    <select class="form-select" id="editObsSymptome" required>
+                                        <option value="">Choisir un symptôme...</option>
+                                        <option value="Toux">Toux</option>
+                                        <option value="Fièvre">Fièvre</option>
+                                        <option value="Fatigue">Fatigue</option>
+                                        <option value="Maux de tête">Maux de tête</option>
+                                        <option value="Nausées">Nausées</option>
+                                        <option value="Douleurs">Douleurs</option>
+                                        <option value="Autre">Autre</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="editObsIntensite" class="form-label">Intensité *</label>
+                                    <select class="form-select" id="editObsIntensite" required>
+                                        <option value="">Choisir l'intensité...</option>
+                                        <option value="Faible">Faible</option>
+                                        <option value="Modérée">Modérée</option>
+                                        <option value="Forte">Forte</option>
+                                        <option value="Très forte">Très forte</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="editObsTranscription" class="form-label">Transcription vocale *</label>
+                                    <textarea class="form-control" id="editObsTranscription" rows="5" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Enregistrement audio</label>
+                                    <div id="editAudioInfo" class="alert alert-info py-2 mb-2" style="display:none;">
+                                        <i class="bi bi-music-note-beamed"></i> Audio existant détecté
+                                    </div>
+                                    <div class="d-flex gap-2 align-items-center flex-wrap">
+                                        <button type="button" id="btnEditStartRec" class="btn btn-outline-success btn-sm">
+                                            <i class="bi bi-mic"></i> Nouvel enregistrement
+                                        </button>
+                                        <button type="button" id="btnEditStopRec" class="btn btn-outline-warning btn-sm" disabled>
+                                            <i class="bi bi-stop-fill"></i> Arrêter
+                                        </button>
+                                        <button type="button" id="btnEditDeleteRec" class="btn btn-outline-secondary btn-sm" disabled>
+                                            <i class="bi bi-trash"></i> Supprimer
+                                        </button>
+                                        <audio id="editAudioPreview" controls style="display:none; max-width: 280px;"></audio>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="editObsUtilisateur" class="form-label">Utilisateur *</label>
+                                    <select class="form-select" id="editObsUtilisateur" required>
+                                        <option value="">Choisir un utilisateur...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-success" id="btnSaveObs">
+                        <i class="bi bi-check-lg"></i> Enregistrer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Modifier Analyse -->
+    <div class="modal fade" id="modalEditAnalyse" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title"><i class="bi bi-pencil"></i> Modifier Analyse</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editAnalyseForm">
+                        <input type="hidden" id="editAnalyseId">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="editAnalyseCategorie" class="form-label">Catégorie *</label>
+                                    <select class="form-select" id="editAnalyseCategorie" required>
+                                        <option value="">Choisir une catégorie...</option>
+                                        <option value="Respiratoire">Respiratoire</option>
+                                        <option value="Cardiovasculaire">Cardiovasculaire</option>
+                                        <option value="Neurologique">Neurologique</option>
+                                        <option value="Digestif">Digestif</option>
+                                        <option value="Général">Général</option>
+                                        <option value="Autre">Autre</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="editAnalyseResume" class="form-label">Résumé *</label>
+                                    <textarea class="form-control" id="editAnalyseResume" rows="4" required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="editAnalyseRecommandations" class="form-label">Recommandations *</label>
+                                    <textarea class="form-control" id="editAnalyseRecommandations" rows="4" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="editAnalyseObservation" class="form-label">Observation associée *</label>
+                                    <select class="form-select" id="editAnalyseObservation" required>
+                                        <option value="">Choisir une observation...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-info" id="btnSaveAnalyse">
+                        <i class="bi bi-check-lg"></i> Enregistrer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script type="module">
-        import {auth} from './modules/auth.js';
-        import {pa} from './modules/authParams.js';
+    <script>
+        const $ = sel => document.querySelector(sel);
+        const $$ = sel => document.querySelectorAll(sel);
 
-        // Configuration de l'API OMK via proxy PHP (pour éviter les problèmes CORS)
-        const API_BASE_URL = 'http://localhost:8000/proxy.php';
+        // ===== CONFIGURATION API OMK - MÉTHODE COASTOBSERVER =====
+        // Clés API directement dans l'URL (pas de proxy.php nécessaire)
+        const OMEKA_API_URL = 'http://localhost/omk_thyp_25-26_clone/api';
         const API_KEY_IDENTITY = '9kKYaeVduzTk3jbe8zXc9BBdvXK83z46';
         const API_KEY_CREDENTIAL = 'jQ6CNQ46Qh0M67qhzazuZRueu6RyoodT';
 
-        // Headers pour les requêtes API (pas besoin d'authentification côté client avec le proxy)
-        const API_HEADERS = {
-            'Content-Type': 'application/json'
+        // Préfixes de vocabulaires (référence enquete)
+        const vocPrefix = {
+            'dcterms': 'http://purl.org/dc/terms/',
+            'bibo': 'http://purl.org/ontology/bibo/',
+            'foaf': 'http://xmlns.com/foaf/0.1/',
+            'hv': 'https://jardindesconnaissances.univ-paris8.fr/onto/hv#'
         };
 
-        // Données globales
+        // Fonction pour construire l'URL API avec les clés en paramètres GET
+        function buildApiUrl(path) {
+            const base = OMEKA_API_URL.trim().replace(/\/+$/, '');
+            const url = new URL(base + path);
+            
+            if (API_KEY_IDENTITY && API_KEY_CREDENTIAL) {
+                url.searchParams.set('key_identity', API_KEY_IDENTITY);
+                url.searchParams.set('key_credential', API_KEY_CREDENTIAL);
+            }
+            
+            return url.toString();
+        }
+
+        // Fonctions API simplifiées (méthode CoastObserver)
+        async function apiGet(path) {
+            const url = buildApiUrl(path);
+            const res = await fetch(url, { method: 'GET' });
+            if (!res.ok) throw new Error(`GET ${path} → ${res.status} ${res.statusText}`);
+            return res.json();
+        }
+
+        async function apiPost(path, bodyObj) {
+            const url = buildApiUrl(path);
+            const res = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(bodyObj)
+            });
+            const text = await res.text();
+            let data;
+            try { data = JSON.parse(text); } catch { data = text; }
+            if (!res.ok) {
+                throw new Error(`POST ${path} → ${res.status} ${res.statusText}\n${text}`);
+            }
+            return data;
+        }
+
+        async function apiPostForm(path, formData) {
+            const url = buildApiUrl(path);
+            const res = await fetch(url, {
+                method: 'POST',
+                body: formData
+            });
+            const text = await res.text();
+            let data;
+            try { data = JSON.parse(text); } catch { data = text; }
+            if (!res.ok) {
+                throw new Error(`POST ${path} → ${res.status} ${res.statusText}\n${text}`);
+            }
+            return data;
+        }
+
+        async function apiDelete(path) {
+            const url = buildApiUrl(path);
+            const res = await fetch(url, { method: 'DELETE' });
+            if (!res.ok && res.status !== 204) {
+                throw new Error(`DELETE ${path} → ${res.status} ${res.statusText}`);
+            }
+            return res.status === 204 || res.status === 200;
+        }
+
+        async function apiPut(path, bodyObj) {
+            const url = buildApiUrl(path);
+            const res = await fetch(url, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(bodyObj)
+            });
+            const text = await res.text();
+            let data;
+            try { data = JSON.parse(text); } catch { data = text; }
+            if (!res.ok) {
+                throw new Error(`PUT ${path} → ${res.status} ${res.statusText}\n${text}`);
+            }
+            return data;
+        }
+
+        // ===== RAFRAÎCHISSEMENT GLOBAL =====
+        function refreshPage(delay = 800) {
+            // Laisser le temps à l'alerte de s'afficher avant reload
+            setTimeout(() => {
+                window.location.reload();
+            }, delay);
+        }
+
+        // ===== DONNÉES GLOBALES =====
         let utilisateurs = [];
         let observations = [];
         let analyses = [];
-        let a;
 
-        // Résolution dynamique des IDs (Resource Template & Class)
+        // Resource Templates
         const TEMPLATE_LABELS = {
             utilisateur: 'Utilisateur',
             observation: 'Observation',
             analyse: 'Analyse'
         };
-        let templateIndex = null; // {label: {templateId, classId}}
+        let templateIndex = null;
+        let propIndex = null;
 
-        // Résolution dynamique des IDs de propriétés (par terme)
-        let propIndex = null; // { 'dcterms:title': 1, 'hv:nom': ..., ... }
+        // ===== ENREGISTREMENT AUDIO (MÉTHODE COASTOBSERVER) =====
+        let mediaRecorder = null;
+        let recordedChunks = [];
+        let recordedBlob = null;
+        
+        // Variables pour l'édition
+        let editMediaRecorder = null;
+        let editRecordedChunks = [];
+        let editRecordedBlob = null;
 
+        async function startRecording() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                recordedChunks = [];
+                recordedBlob = null;
+
+                mediaRecorder = new MediaRecorder(stream, { mimeType: 'audio/webm' });
+
+                mediaRecorder.ondataavailable = e => {
+                    if (e.data && e.data.size > 0) {
+                        recordedChunks.push(e.data);
+                    }
+                };
+
+                mediaRecorder.onstop = () => {
+                    recordedBlob = new Blob(recordedChunks, { type: 'audio/webm' });
+                    const url = URL.createObjectURL(recordedBlob);
+                    const audioPreview = $('#audioPreview');
+                    audioPreview.src = url;
+                    audioPreview.style.display = 'block';
+                    stream.getTracks().forEach(t => t.stop());
+                    $('#btnDeleteRec').disabled = false;
+                };
+
+                mediaRecorder.start();
+                $('#btnStartRec').disabled = true;
+                $('#btnStopRec').disabled = false;
+            } catch (err) {
+                showAlert("Impossible d'accéder au micro : " + err.message, 'danger');
+            }
+        }
+
+        function stopRecording() {
+            if (mediaRecorder && mediaRecorder.state === 'recording') {
+                mediaRecorder.stop();
+            }
+            $('#btnStartRec').disabled = false;
+            $('#btnStopRec').disabled = true;
+        }
+
+        function deleteRecording() {
+            recordedChunks = [];
+            recordedBlob = null;
+            const audioPreview = $('#audioPreview');
+            audioPreview.removeAttribute('src');
+            audioPreview.style.display = 'none';
+            $('#btnDeleteRec').disabled = true;
+        }
+
+        // Fonctions pour l'enregistrement dans le modal d'édition
+        async function startEditRecording() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                editRecordedChunks = [];
+                editRecordedBlob = null;
+
+                editMediaRecorder = new MediaRecorder(stream, { mimeType: 'audio/webm' });
+
+                editMediaRecorder.ondataavailable = e => {
+                    if (e.data && e.data.size > 0) {
+                        editRecordedChunks.push(e.data);
+                    }
+                };
+
+                editMediaRecorder.onstop = () => {
+                    editRecordedBlob = new Blob(editRecordedChunks, { type: 'audio/webm' });
+                    const url = URL.createObjectURL(editRecordedBlob);
+                    const audioPreview = $('#editAudioPreview');
+                    audioPreview.src = url;
+                    audioPreview.style.display = 'block';
+                    stream.getTracks().forEach(t => t.stop());
+                    $('#btnEditDeleteRec').disabled = false;
+                };
+
+                editMediaRecorder.start();
+                $('#btnEditStartRec').disabled = true;
+                $('#btnEditStopRec').disabled = false;
+            } catch (err) {
+                showAlert("Impossible d'accéder au micro : " + err.message, 'danger');
+            }
+        }
+
+        function stopEditRecording() {
+            if (editMediaRecorder && editMediaRecorder.state === 'recording') {
+                editMediaRecorder.stop();
+            }
+            $('#btnEditStartRec').disabled = false;
+            $('#btnEditStopRec').disabled = true;
+        }
+
+        function deleteEditRecording() {
+            editRecordedChunks = [];
+            editRecordedBlob = null;
+            const audioPreview = $('#editAudioPreview');
+            audioPreview.removeAttribute('src');
+            audioPreview.style.display = 'none';
+            $('#btnEditDeleteRec').disabled = true;
+        }
+
+        // ===== CHARGEMENT DES TEMPLATES & PROPRIÉTÉS =====
         async function loadTemplateIndex() {
             if (templateIndex) return templateIndex;
-            const resp = await fetch(`${API_BASE_URL}?path=/resource_templates&per_page=1000`);
-            if (!resp.ok) throw new Error(`Erreur chargement resource_templates: ${resp.status}`);
-            const list = await resp.json();
+            const list = await apiGet('/resource_templates?per_page=1000');
             templateIndex = {};
             list.forEach(rt => {
                 const label = rt['o:label'];
@@ -755,9 +1121,7 @@
 
         async function loadPropertyIndex() {
             if (propIndex) return propIndex;
-            const resp = await fetch(`${API_BASE_URL}?path=/properties&per_page=1000`);
-            if (!resp.ok) throw new Error(`Erreur chargement properties: ${resp.status}`);
-            const list = await resp.json();
+            const list = await apiGet('/properties?per_page=1000');
             propIndex = {};
             list.forEach(p => {
                 const term = p['o:term'];
@@ -772,66 +1136,97 @@
             return idx[term];
         }
 
-        // Enregistrement audio
-        let mediaRecorder = null;
-        let recordedChunks = [];
-        let audioBlob = null;
+        // ===== FONCTIONS UTILITAIRES =====
+        function getPropertyValue(item, propertyTerm) {
+            if (!item || !item[propertyTerm]) return null;
+            const values = Array.isArray(item[propertyTerm]) ? item[propertyTerm] : [item[propertyTerm]];
+            return values[0] && values[0]['@value'] ? values[0]['@value'] : null;
+        }
 
-        // Initialisation
-        $(document).ready(function() {
-            // Charger index templates & propriétés puis les données
-            (async () => {
-                try {
-                    await Promise.all([
-                        loadTemplateIndex(),
-                        loadPropertyIndex()
-                    ]);
-                } catch (e) {
-                    console.error('Erreur init IDs dynamiques:', e);
-                } finally {
-                    loadAllData();
-                }
-            })();
+        function showLoading(section) {
+            const loader = $(`#loading-${section}`);
+            if (loader) loader.style.display = 'block';
+        }
 
-            // Gestionnaire pour le bouton actualiser
-            $('#btnRefresh').on('click', function() {
-                loadAllData();
-            });
+        function hideLoading(section) {
+            const loader = $(`#loading-${section}`);
+            if (loader) loader.style.display = 'none';
+        }
 
-            // Gestionnaires pour les boutons actualiser des autres tableaux
-            $('#btnRefreshObs').on('click', function() {
-                loadAllData();
-            });
+        function showAlert(message, type = 'info') {
+            const alertHtml = `
+                <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            `;
+            document.querySelector('.container-fluid').insertAdjacentHTML('afterbegin', alertHtml);
+            setTimeout(() => {
+                const alerts = $$('.alert');
+                if (alerts.length) alerts[0].remove();
+            }, 5000);
+        }
 
-            $('#btnRefreshAna').on('click', function() {
-                loadAllData();
-            });
+        function updateStats() {
+            $('#stats-utilisateurs').textContent = utilisateurs.length;
+            $('#stats-observations').textContent = observations.length;
+            $('#stats-analyses').textContent = analyses.length;
+        }
 
-            // Gestionnaire pour les boutons de suppression (délégation d'événements)
-            $(document).on('click', '.btn-delete', function() {
-                const itemId = $(this).data('item-id');
-                deleteItem(itemId);
-            });
+        function formatDate(dateString) {
+            if (!dateString) return 'N/A';
+            return new Date(dateString).toLocaleString('fr-FR');
+        }
 
-            // Gestionnaire pour les boutons de modification
-            $(document).on('click', '.btn-edit', function() {
-                const itemId = $(this).data('item-id');
-                const itemType = $(this).data('type');
-                editItem(itemId, itemType);
-            });
+        function truncateText(text, maxLength) {
+            if (!text) return '';
+            return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
+        }
 
-            // Gestionnaires d'événements pour les formulaires
-            $('#utilisateurForm').on('submit', handleUtilisateurSubmit);
-            $('#observationForm').on('submit', handleObservationSubmit);
-            $('#analyseForm').on('submit', handleAnalyseSubmit);
+        function getIntensiteColor(intensite) {
+            switch (intensite) {
+                case 'Faible': return 'success';
+                case 'Modérée': return 'warning';
+                case 'Forte': return 'danger';
+                case 'Très forte': return 'dark';
+                default: return 'secondary';
+            }
+        }
 
-            // Enregistrement audio handlers
-            $('#btnStartRec').on('click', startRecording);
-            $('#btnStopRec').on('click', stopRecording);
-            $('#btnDeleteRec').on('click', deleteRecording);
-        });
+        // ===== CHARGEMENT DES DONNÉES =====
+        async function loadUtilisateurs() {
+            try {
+                const { templateId } = await getIdsFor(TEMPLATE_LABELS.utilisateur);
+                utilisateurs = await apiGet(`/items?resource_template_id=${templateId}&per_page=1000`);
+                displayUtilisateurs(utilisateurs);
+            } catch (error) {
+                console.error('Erreur lors du chargement des utilisateurs:', error);
+                $('#utilisateursTable tbody').innerHTML = '<tr><td colspan="6" class="text-center text-danger">Erreur de chargement</td></tr>';
+            }
+        }
 
-        // Fonction pour charger toutes les données
+        async function loadObservations() {
+            try {
+                const { templateId } = await getIdsFor(TEMPLATE_LABELS.observation);
+                observations = await apiGet(`/items?resource_template_id=${templateId}&per_page=1000`);
+                displayObservations(observations);
+            } catch (error) {
+                console.error('Erreur lors du chargement des observations:', error);
+                $('#observationsTable tbody').innerHTML = '<tr><td colspan="6" class="text-center text-danger">Erreur de chargement</td></tr>';
+            }
+        }
+
+        async function loadAnalyses() {
+            try {
+                const { templateId } = await getIdsFor(TEMPLATE_LABELS.analyse);
+                analyses = await apiGet(`/items?resource_template_id=${templateId}&per_page=1000`);
+                displayAnalyses(analyses);
+            } catch (error) {
+                console.error('Erreur lors du chargement des analyses:', error);
+                $('#analysesTable tbody').innerHTML = '<tr><td colspan="8" class="text-center text-danger">Erreur de chargement</td></tr>';
+            }
+        }
+
         async function loadAllData() {
             showLoading('utilisateurs');
             showLoading('observations');
@@ -857,276 +1252,13 @@
             }
         }
 
-
-
-        // Gestionnaires de soumission des formulaires
-        async function handleUtilisateurSubmit(e) {
-            e.preventDefault();
-
-            const editId = $('#utilisateurForm').attr('data-edit-id');
-            const { templateId, classId } = await getIdsFor(TEMPLATE_LABELS.utilisateur);
-            const pidTitle = await getPropId('dcterms:title');
-            const pidNom = await getPropId('hv:nom');
-            const pidEmail = await getPropId('hv:email');
-            
-            // Générer le titre automatique : "Utilisateur 1", "Utilisateur 2", etc.
-            const userCount = utilisateurs.length + 1;
-            const autoTitle = editId ? $('#utilisateurNom').val() : `Utilisateur ${userCount}`;
-            
-            const data = {
-                'dcterms:title': [{
-                    type: 'literal',
-                    property_id: pidTitle,
-                    '@value': autoTitle
-                }],
-                'hv:nom': [{
-                    type: 'literal',
-                    property_id: pidNom,
-                    '@value': $('#utilisateurNom').val()
-                }],
-                'hv:email': [{
-                    type: 'literal',
-                    property_id: pidEmail,
-                    '@value': $('#utilisateurEmail').val(),
-                    ':is_public': true
-                }],
-                'o:resource_class': {
-                    'o:id': classId
-                },
-                'o:resource_template': {
-                    'o:id': templateId
-                }
-            };
-
-            try {
-                if (editId) {
-                    await updateItem(editId, data);
-                    $('#utilisateurForm').removeAttr('data-edit-id');
-                    showAlert('Utilisateur modifié avec succès', 'success');
-                } else {
-                    await createItem(data);
-                    showAlert('Utilisateur créé avec succès', 'success');
-                }
-                $('#utilisateurForm')[0].reset();
-                await loadUtilisateurs();
-                updateStats();
-                populateUserSelects();
-            } catch (error) {
-                console.error('Erreur:', error);
-                showAlert('Erreur lors de l\'opération', 'danger');
-            }
-        }
-
-        async function handleObservationSubmit(e) {
-            e.preventDefault();
-
-            const utilisateurId = $('#observationUtilisateur').val();
-            if (!utilisateurId) {
-                showAlert('Veuillez sélectionner un utilisateur', 'warning');
-                return;
-            }
-
-            const editId = $('#observationForm').attr('data-edit-id');
-            const { templateId, classId } = await getIdsFor(TEMPLATE_LABELS.observation);
-            const pidTitle = await getPropId('dcterms:title');
-            const pidDate = await getPropId('hv:dateObservation');
-            const pidSymptome = await getPropId('hv:symptome');
-            const pidIntensite = await getPropId('hv:intensite');
-            const pidTranscription = await getPropId('hv:transcription');
-            const pidUtilisateur = await getPropId('hv:utilisateur');
-            const data = {
-                'dcterms:title': [{
-                    type: 'literal',
-                    property_id: pidTitle,
-                    '@value': `Observation - ${$('#observationSymptome').val()}`
-                }],
-                'hv:dateObservation': [{
-                    type: 'literal',
-                    property_id: pidDate,
-                    '@value': $('#observationDate').val()
-                }],
-                'hv:symptome': [{
-                    type: 'literal',
-                    property_id: pidSymptome,
-                    '@value': $('#observationSymptome').val()
-                }],
-                'hv:intensite': [{
-                    type: 'literal',
-                    property_id: pidIntensite,
-                    '@value': $('#observationIntensite').val()
-                }],
-                'hv:transcription': [{
-                    type: 'literal',
-                    property_id: pidTranscription,
-                    '@value': $('#observationTranscription').val()
-                }],
-                'hv:utilisateur': [{
-                    type: 'resource',
-                    property_id: pidUtilisateur,
-                    value_resource_id: parseInt(utilisateurId)
-                }],
-                'o:resource_class': {
-                    'o:id': classId
-                },
-                'o:resource_template': {
-                    'o:id': templateId
-                }
-            };
-
-            try {
-                if (editId) {
-                    await updateItem(editId, data);
-                    $('#observationForm').removeAttr('data-edit-id');
-                    showAlert('Observation modifiée avec succès', 'success');
-                } else {
-                    // Méthode du prof : créer item avec fichier en une seule requête
-                    await createItemWithFile(data, audioBlob);
-                    showAlert('Observation créée avec succès', 'success');
-                }
-                $('#observationForm')[0].reset();
-                deleteRecording();
-                await loadObservations();
-                updateStats();
-                populateObservationSelects();
-            } catch (error) {
-                console.error('Erreur:', error);
-                showAlert('Erreur lors de l\'opération', 'danger');
-            }
-        }
-
-        async function handleAnalyseSubmit(e) {
-            e.preventDefault();
-
-            const observationId = $('#analyseObservation').val();
-            if (!observationId) {
-                showAlert('Veuillez sélectionner une observation', 'warning');
-                return;
-            }
-
-            const editId = $('#analyseForm').attr('data-edit-id');
-            const { templateId, classId } = await getIdsFor(TEMPLATE_LABELS.analyse);
-            const pidTitle = await getPropId('dcterms:title');
-            const pidCategorie = await getPropId('hv:categorie');
-            const pidResume = await getPropId('hv:resume');
-            const pidReco = await getPropId('hv:recommandations');
-            const pidObserve = await getPropId('hv:observe');
-            const data = {
-                'dcterms:title': [{
-                    type: 'literal',
-                    property_id: pidTitle,
-                    '@value': `Analyse - ${$('#analyseCategorie').val()}`
-                }],
-                'hv:categorie': [{
-                    type: 'literal',
-                    property_id: pidCategorie,
-                    '@value': $('#analyseCategorie').val()
-                }],
-                'hv:resume': [{
-                    type: 'literal',
-                    property_id: pidResume,
-                    '@value': $('#analyseResume').val()
-                }],
-                'hv:recommandations': [{
-                    type: 'literal',
-                    property_id: pidReco,
-                    '@value': $('#analyseRecommandations').val()
-                }],
-                'hv:observe': [{
-                    type: 'resource',
-                    property_id: pidObserve,
-                    value_resource_id: parseInt(observationId)
-                }],
-                'o:resource_class': {
-                    'o:id': classId
-                },
-                'o:resource_template': {
-                    'o:id': templateId
-                }
-            };
-
-            try {
-                if (editId) {
-                    await updateItem(editId, data);
-                    $('#analyseForm').removeAttr('data-edit-id');
-                    showAlert('Analyse modifiée avec succès', 'success');
-                } else {
-                    await createItem(data);
-                    showAlert('Analyse créée avec succès', 'success');
-                }
-                $('#analyseForm')[0].reset();
-                await loadAnalyses();
-                updateStats();
-            } catch (error) {
-                console.error('Erreur:', error);
-                showAlert('Erreur lors de l\'opération', 'danger');
-            }
-        }
-
-        // Fonctions de chargement des données
-        async function loadUtilisateurs() {
-            try {
-                const { templateId } = await getIdsFor(TEMPLATE_LABELS.utilisateur);
-                const response = await fetch(`${API_BASE_URL}?path=/items&resource_template_id=${templateId}`, {
-                    headers: API_HEADERS
-                });
-
-                if (!response.ok) {
-                    throw new Error(`Erreur HTTP: ${response.status}`);
-                }
-
-                utilisateurs = await response.json();
-                displayUtilisateurs(utilisateurs);
-            } catch (error) {
-                console.error('Erreur lors du chargement des utilisateurs:', error);
-                $('#utilisateursTable tbody').html('<tr><td colspan="5" class="text-center text-danger">Erreur de chargement</td></tr>');
-            }
-        }
-
-        async function loadObservations() {
-            try {
-                const { templateId } = await getIdsFor(TEMPLATE_LABELS.observation);
-                const response = await fetch(`${API_BASE_URL}?path=/items&resource_template_id=${templateId}`, {
-                    headers: API_HEADERS
-                });
-
-                if (!response.ok) {
-                    throw new Error(`Erreur HTTP: ${response.status}`);
-                }
-
-                observations = await response.json();
-                displayObservations(observations);
-            } catch (error) {
-                console.error('Erreur lors du chargement des observations:', error);
-                $('#observationsTable tbody').html('<tr><td colspan="6" class="text-center text-danger">Erreur de chargement</td></tr>');
-            }
-        }
-
-        async function loadAnalyses() {
-            try {
-                const { templateId } = await getIdsFor(TEMPLATE_LABELS.analyse);
-                const response = await fetch(`${API_BASE_URL}?path=/items&resource_template_id=${templateId}`, {
-                    headers: API_HEADERS
-                });
-
-                if (!response.ok) {
-                    throw new Error(`Erreur HTTP: ${response.status}`);
-                }
-
-                analyses = await response.json();
-                displayAnalyses(analyses);
-            } catch (error) {
-                console.error('Erreur lors du chargement des analyses:', error);
-                $('#analysesTable tbody').html('<tr><td colspan="5" class="text-center text-danger">Erreur de chargement</td></tr>');
-            }
-        }
-
-        // Fonctions d'affichage des données
+        // ===== AFFICHAGE DES DONNÉES =====
         function displayUtilisateurs(data) {
             const tbody = $('#utilisateursTable tbody');
-            tbody.empty();
+            tbody.innerHTML = '';
 
             if (data.length === 0) {
-                tbody.html('<tr><td colspan="6" class="text-center">Aucun utilisateur trouvé</td></tr>');
+                tbody.innerHTML = '<tr><td colspan="6" class="text-center">Aucun utilisateur trouvé</td></tr>';
                 return;
             }
 
@@ -1134,9 +1266,9 @@
                 const titre = getPropertyValue(user, 'dcterms:title') || 'N/A';
                 const nom = getPropertyValue(user, 'hv:nom') || 'N/A';
                 const email = getPropertyValue(user, 'hv:email') || 'N/A';
-                const created = user['o:created'] ? new Date(user['o:created']['@value']).toLocaleString('fr-FR') : 'N/A';
+                const created = user['o:created'] ? formatDate(user['o:created']['@value']) : 'N/A';
 
-                tbody.append(`
+                tbody.innerHTML += `
                     <tr>
                         <td>${user['o:id']}</td>
                         <td>${titre}</td>
@@ -1144,7 +1276,7 @@
                         <td>${email}</td>
                         <td>${created}</td>
                         <td>
-                            <button class="btn btn-sm btn-outline-primary btn-edit me-1" data-item-id="${user['o:id']}" data-type="utilisateur">
+                            <button class="btn btn-sm btn-outline-primary btn-edit-user me-1" data-item-id="${user['o:id']}" data-titre="${titre}" data-nom="${nom}" data-email="${email}">
                                 <i class="bi bi-pencil"></i>
                             </button>
                             <button class="btn btn-sm btn-outline-danger btn-delete" data-item-id="${user['o:id']}">
@@ -1152,16 +1284,16 @@
                             </button>
                         </td>
                     </tr>
-                `);
+                `;
             });
         }
 
         function displayObservations(data) {
             const tbody = $('#observationsTable tbody');
-            tbody.empty();
+            tbody.innerHTML = '';
 
             if (data.length === 0) {
-                tbody.html('<tr><td colspan="6" class="text-center">Aucune observation trouvée</td></tr>');
+                tbody.innerHTML = '<tr><td colspan="6" class="text-center">Aucune observation trouvée</td></tr>';
                 return;
             }
 
@@ -1169,21 +1301,36 @@
                 const date = getPropertyValue(obs, 'hv:dateObservation') || 'N/A';
                 const symptome = getPropertyValue(obs, 'hv:symptome') || 'N/A';
                 const intensite = getPropertyValue(obs, 'hv:intensite') || 'N/A';
-                const utilisateur = getUtilisateurNom(obs['o:id']) || 'N/A';
+                const userProp = obs['hv:utilisateur'];
+                let utilisateurNom = 'N/A';
+                if (userProp && userProp[0] && userProp[0]['value_resource_id']) {
+                    const userId = userProp[0]['value_resource_id'];
+                    const user = utilisateurs.find(u => u['o:id'] === userId);
+                    if (user) utilisateurNom = getPropertyValue(user, 'hv:nom') || 'N/A';
+                }
 
-                tbody.append(`
+                const userId = userProp && userProp[0] && userProp[0]['value_resource_id'] ? userProp[0]['value_resource_id'] : '';
+                const transcription = getPropertyValue(obs, 'hv:transcription') || '';
+                
+                // Vérifier si l'observation a un fichier audio
+                const hasAudio = obs['o:media'] && obs['o:media'].length > 0;
+                
+                tbody.innerHTML += `
                     <tr>
                         <td>${obs['o:id']}</td>
                         <td>${formatDate(date)}</td>
+                        <td><span class="badge bg-warning text-dark">${symptome}</span></td>
+                        <td><span class="badge bg-${getIntensiteColor(intensite)}">${intensite}</span></td>
+                        <td>${utilisateurNom}</td>
                         <td>
-                            <span class="badge bg-warning text-dark">${symptome}</span>
-                        </td>
-                        <td>
-                            <span class="badge bg-${getIntensiteColor(intensite)}">${intensite}</span>
-                        </td>
-                        <td>${utilisateur}</td>
-                        <td>
-                            <button class="btn btn-sm btn-outline-primary btn-edit me-1" data-item-id="${obs['o:id']}" data-type="observation">
+                            <button class="btn btn-sm btn-outline-primary btn-edit-obs me-1" 
+                                data-item-id="${obs['o:id']}" 
+                                data-date="${date}" 
+                                data-symptome="${symptome}" 
+                                data-intensite="${intensite}" 
+                                data-transcription="${transcription.replace(/"/g, '&quot;')}" 
+                                data-user-id="${userId}"
+                                data-has-audio="${hasAudio}">
                                 <i class="bi bi-pencil"></i>
                             </button>
                             <button class="btn btn-sm btn-outline-danger btn-delete" data-item-id="${obs['o:id']}">
@@ -1191,16 +1338,16 @@
                             </button>
                         </td>
                     </tr>
-                `);
+                `;
             });
         }
 
         function displayAnalyses(data) {
             const tbody = $('#analysesTable tbody');
-            tbody.empty();
+            tbody.innerHTML = '';
 
             if (data.length === 0) {
-                tbody.html('<tr><td colspan="8" class="text-center">Aucune analyse trouvée</td></tr>');
+                tbody.innerHTML = '<tr><td colspan="8" class="text-center">Aucune analyse trouvée</td></tr>';
                 return;
             }
 
@@ -1209,22 +1356,34 @@
                 const categorie = getPropertyValue(analyse, 'hv:categorie') || 'N/A';
                 const resume = getPropertyValue(analyse, 'hv:resume') || 'N/A';
                 const recommandations = getPropertyValue(analyse, 'hv:recommandations') || 'N/A';
-                const observation = getObservationTitre(analyse['o:id']) || 'N/A';
-                const created = analyse['o:created'] ? new Date(analyse['o:created']['@value']).toLocaleString('fr-FR') : 'N/A';
+                const created = analyse['o:created'] ? formatDate(analyse['o:created']['@value']) : 'N/A';
+                
+                const obsProp = analyse['hv:observe'];
+                let observationTitre = 'N/A';
+                if (obsProp && obsProp[0] && obsProp[0]['value_resource_id']) {
+                    const obsId = obsProp[0]['value_resource_id'];
+                    const obs = observations.find(o => o['o:id'] === obsId);
+                    if (obs) observationTitre = getPropertyValue(obs, 'dcterms:title') || 'N/A';
+                }
 
-                tbody.append(`
+                const obsId = obsProp && obsProp[0] && obsProp[0]['value_resource_id'] ? obsProp[0]['value_resource_id'] : '';
+                
+                tbody.innerHTML += `
                     <tr>
                         <td>${analyse['o:id']}</td>
                         <td>${titre}</td>
-                        <td>
-                            <span class="badge bg-info">${categorie}</span>
-                        </td>
+                        <td><span class="badge bg-info">${categorie}</span></td>
                         <td>${truncateText(resume, 50)}</td>
                         <td>${truncateText(recommandations, 50)}</td>
-                        <td>${observation}</td>
+                        <td>${observationTitre}</td>
                         <td>${created}</td>
                         <td>
-                            <button class="btn btn-sm btn-outline-primary btn-edit me-1" data-item-id="${analyse['o:id']}" data-type="analyse">
+                            <button class="btn btn-sm btn-outline-primary btn-edit-analyse me-1" 
+                                data-item-id="${analyse['o:id']}" 
+                                data-categorie="${categorie}" 
+                                data-resume="${resume.replace(/"/g, '&quot;')}" 
+                                data-recommandations="${recommandations.replace(/"/g, '&quot;')}" 
+                                data-obs-id="${obsId}">
                                 <i class="bi bi-pencil"></i>
                             </button>
                             <button class="btn btn-sm btn-outline-danger btn-delete" data-item-id="${analyse['o:id']}">
@@ -1232,336 +1391,567 @@
                             </button>
                         </td>
                     </tr>
-                `);
+                `;
             });
         }
 
-        // Fonctions utilitaires
-        function getPropertyValue(item, propertyTerm) {
-            if (!item || !item[propertyTerm]) return null;
-
-            const values = Array.isArray(item[propertyTerm]) ? item[propertyTerm] : [item[propertyTerm]];
-            return values[0] && values[0]['@value'] ? values[0]['@value'] : null;
-        }
-
-        function getUtilisateurNom(observationId) {
-            const observation = observations.find(obs => obs['o:id'] === observationId);
-            if (!observation) return 'N/A';
-
-            const utilisateurResource = getPropertyValue(observation, 'hv:utilisateur');
-            if (!utilisateurResource) return 'N/A';
-
-            const utilisateur = utilisateurs.find(user => user['o:id'] === utilisateurResource);
-            return utilisateur ? getPropertyValue(utilisateur, 'hv:nom') : 'Utilisateur inconnu';
-        }
-
-        function getObservationTitre(analyseId) {
-            const analyse = analyses.find(a => a['o:id'] === analyseId);
-            if (!analyse) return 'N/A';
-
-            const observationResource = getPropertyValue(analyse, 'hv:observe');
-            if (!observationResource) return 'N/A';
-
-            const observation = observations.find(obs => obs['o:id'] === observationResource);
-            return observation ? getPropertyValue(observation, 'dcterms:title') : 'Observation inconnue';
-        }
-
-        function getIntensiteColor(intensite) {
-            switch (intensite) {
-                case 'Faible': return 'success';
-                case 'Modérée': return 'warning';
-                case 'Forte': return 'danger';
-                case 'Très forte': return 'dark';
-                default: return 'secondary';
-            }
-        }
-
-        function formatDate(dateString) {
-            if (!dateString) return 'N/A';
-            return new Date(dateString).toLocaleString('fr-FR');
-        }
-
-        function truncateText(text, maxLength) {
-            if (!text) return '';
-            return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
-        }
-
         function populateUserSelects() {
-            const selects = ['#observationUtilisateur'];
-            selects.forEach(selectId => {
-                const select = $(selectId);
-                select.empty();
-                select.append('<option value="">Choisir un utilisateur...</option>');
+            const select = $('#observationUtilisateur');
+            select.innerHTML = '<option value="">Choisir un utilisateur...</option>';
 
-                utilisateurs.forEach(user => {
-                    const nom = getPropertyValue(user, 'hv:nom') || 'N/A';
-                    select.append(`<option value="${user['o:id']}">${user['o:id']} - ${nom}</option>`);
-                });
+            utilisateurs.forEach(user => {
+                const nom = getPropertyValue(user, 'hv:nom') || 'N/A';
+                select.innerHTML += `<option value="${user['o:id']}">${user['o:id']} - ${nom}</option>`;
             });
         }
 
         function populateObservationSelects() {
             const select = $('#analyseObservation');
-            select.empty();
-            select.append('<option value="">Choisir une observation...</option>');
+            select.innerHTML = '<option value="">Choisir une observation...</option>';
 
             observations.forEach(obs => {
                 const titre = getPropertyValue(obs, 'dcterms:title') || 'N/A';
-                select.append(`<option value="${obs['o:id']}">${obs['o:id']} - ${titre}</option>`);
+                select.innerHTML += `<option value="${obs['o:id']}">${obs['o:id']} - ${titre}</option>`;
             });
         }
 
-        function updateStats() {
-            $('#stats-utilisateurs').text(utilisateurs.length);
-            $('#stats-observations').text(observations.length);
-            $('#stats-analyses').text(analyses.length);
+        function populateEditUserSelect() {
+            const select = $('#editObsUtilisateur');
+            select.innerHTML = '<option value="">Choisir un utilisateur...</option>';
+
+            utilisateurs.forEach(user => {
+                const nom = getPropertyValue(user, 'hv:nom') || 'N/A';
+                select.innerHTML += `<option value="${user['o:id']}">${user['o:id']} - ${nom}</option>`;
+            });
         }
 
-        function showLoading(section) {
-            $(`#loading-${section}`).show();
+        function populateEditObservationSelect() {
+            const select = $('#editAnalyseObservation');
+            select.innerHTML = '<option value="">Choisir une observation...</option>';
+
+            observations.forEach(obs => {
+                const titre = getPropertyValue(obs, 'dcterms:title') || 'N/A';
+                select.innerHTML += `<option value="${obs['o:id']}">${obs['o:id']} - ${titre}</option>`;
+            });
         }
 
-        function hideLoading(section) {
-            $(`#loading-${section}`).hide();
-        }
+        // ===== CRÉATION D'ITEMS =====
+        async function handleUtilisateurSubmit(e) {
+            e.preventDefault();
 
-        function showAlert(message, type) {
-            const alertHtml = `
-                <div class="alert alert-${type} alert-dismissible fade show" role="alert">
-                    ${message}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                </div>
-            `;
-
-            $('.container-fluid').prepend(alertHtml);
-
-            // Auto-dismiss after 5 seconds
-            setTimeout(() => {
-                $('.alert').alert('close');
-            }, 5000);
-        }
-
-        // Fonctions API
-        async function createItem(data) {
             try {
-                const response = await fetch(`${API_BASE_URL}?path=/items`, {
-                    method: 'POST',
-                    headers: API_HEADERS,
-                    body: JSON.stringify(data)
-                });
+                const { templateId, classId } = await getIdsFor(TEMPLATE_LABELS.utilisateur);
+                const pidTitle = await getPropId('dcterms:title');
+                const pidNom = await getPropId('hv:nom');
+                const pidEmail = await getPropId('hv:email');
+                
+                const userCount = utilisateurs.length + 1;
+                const autoTitle = `Utilisateur ${userCount}`;
+                
+                const data = {
+                    'dcterms:title': [{
+                        type: 'literal',
+                        property_id: pidTitle,
+                        '@value': autoTitle
+                    }],
+                    'hv:nom': [{
+                        type: 'literal',
+                        property_id: pidNom,
+                        '@value': $('#utilisateurNom').value
+                    }],
+                    'hv:email': [{
+                        type: 'literal',
+                        property_id: pidEmail,
+                        '@value': $('#utilisateurEmail').value
+                    }],
+                    'o:resource_class': { 'o:id': classId },
+                    'o:resource_template': { 'o:id': templateId }
+                };
 
-                if (!response.ok) {
-                    throw new Error(`Erreur HTTP: ${response.status}`);
-                }
-
-                return await response.json();
+                await apiPost('/items', data);
+                showAlert('Utilisateur créé avec succès', 'success');
+                $('#utilisateurForm').reset();
+                await loadUtilisateurs();
+                updateStats();
+                populateUserSelects();
             } catch (error) {
-                console.error('Erreur lors de la création:', error);
-                throw error;
+                console.error('Erreur:', error);
+                showAlert('Erreur lors de la création : ' + error.message, 'danger');
             }
         }
 
-        async function updateItem(itemId, data) {
+        async function handleObservationSubmit(e) {
+            e.preventDefault();
+
+            const utilisateurId = $('#observationUtilisateur').value;
+            if (!utilisateurId) {
+                showAlert('Veuillez sélectionner un utilisateur', 'warning');
+                return;
+            }
+
             try {
-                const response = await fetch(`${API_BASE_URL}?path=/items/${itemId}`, {
-                    method: 'PUT',
-                    headers: API_HEADERS,
-                    body: JSON.stringify(data)
-                });
+                const { templateId, classId } = await getIdsFor(TEMPLATE_LABELS.observation);
+                const pidTitle = await getPropId('dcterms:title');
+                const pidDate = await getPropId('hv:dateObservation');
+                const pidSymptome = await getPropId('hv:symptome');
+                const pidIntensite = await getPropId('hv:intensite');
+                const pidTranscription = await getPropId('hv:transcription');
+                const pidUtilisateur = await getPropId('hv:utilisateur');
 
-                if (!response.ok) {
-                    throw new Error(`Erreur HTTP: ${response.status}`);
+                const data = {
+                    'dcterms:title': [{
+                        type: 'literal',
+                        property_id: pidTitle,
+                        '@value': `Observation - ${$('#observationSymptome').value}`
+                    }],
+                    'hv:dateObservation': [{
+                        type: 'literal',
+                        property_id: pidDate,
+                        '@value': $('#observationDate').value
+                    }],
+                    'hv:symptome': [{
+                        type: 'literal',
+                        property_id: pidSymptome,
+                        '@value': $('#observationSymptome').value
+                    }],
+                    'hv:intensite': [{
+                        type: 'literal',
+                        property_id: pidIntensite,
+                        '@value': $('#observationIntensite').value
+                    }],
+                    'hv:transcription': [{
+                        type: 'literal',
+                        property_id: pidTranscription,
+                        '@value': $('#observationTranscription').value
+                    }],
+                    'hv:utilisateur': [{
+                        type: 'resource',
+                        property_id: pidUtilisateur,
+                        value_resource_id: parseInt(utilisateurId)
+                    }],
+                    'o:resource_class': { 'o:id': classId },
+                    'o:resource_template': { 'o:id': templateId }
+                };
+
+                // Méthode CoastObserver: créer item avec fichier en une seule requête
+                if (recordedBlob) {
+                    await createItemWithMedia(data, recordedBlob);
+                } else {
+                    await apiPost('/items', data);
                 }
 
-                return await response.json();
+                showAlert('Observation créée avec succès', 'success');
+                $('#observationForm').reset();
+                deleteRecording();
+                await loadObservations();
+                updateStats();
+                populateObservationSelects();
             } catch (error) {
-                console.error('Erreur lors de la mise à jour:', error);
-                throw error;
+                console.error('Erreur:', error);
+                showAlert('Erreur lors de la création : ' + error.message, 'danger');
             }
         }
 
-        async function editItem(itemId, itemType) {
+        async function handleAnalyseSubmit(e) {
+            e.preventDefault();
+
+            const observationId = $('#analyseObservation').value;
+            if (!observationId) {
+                showAlert('Veuillez sélectionner une observation', 'warning');
+                return;
+            }
+
             try {
-                const response = await fetch(`${API_BASE_URL}?path=/items/${itemId}`, {
-                    headers: API_HEADERS
-                });
+                const { templateId, classId } = await getIdsFor(TEMPLATE_LABELS.analyse);
+                const pidTitle = await getPropId('dcterms:title');
+                const pidCategorie = await getPropId('hv:categorie');
+                const pidResume = await getPropId('hv:resume');
+                const pidReco = await getPropId('hv:recommandations');
+                const pidObserve = await getPropId('hv:observe');
 
-                if (!response.ok) {
-                    throw new Error(`Erreur HTTP: ${response.status}`);
-                }
+                const data = {
+                    'dcterms:title': [{
+                        type: 'literal',
+                        property_id: pidTitle,
+                        '@value': `Analyse - ${$('#analyseCategorie').value}`
+                    }],
+                    'hv:categorie': [{
+                        type: 'literal',
+                        property_id: pidCategorie,
+                        '@value': $('#analyseCategorie').value
+                    }],
+                    'hv:resume': [{
+                        type: 'literal',
+                        property_id: pidResume,
+                        '@value': $('#analyseResume').value
+                    }],
+                    'hv:recommandations': [{
+                        type: 'literal',
+                        property_id: pidReco,
+                        '@value': $('#analyseRecommandations').value
+                    }],
+                    'hv:observe': [{
+                        type: 'resource',
+                        property_id: pidObserve,
+                        value_resource_id: parseInt(observationId)
+                    }],
+                    'o:resource_class': { 'o:id': classId },
+                    'o:resource_template': { 'o:id': templateId }
+                };
 
-                const item = await response.json();
-
-                // Remplir le formulaire approprié et le déplier
-                if (itemType === 'utilisateur') {
-                    fillUtilisateurForm(item);
-                    $('#formUtilisateur').collapse('show');
-                    $('#utilisateurs-tab').tab('show');
-                } else if (itemType === 'observation') {
-                    fillObservationForm(item);
-                    $('#formObservation').collapse('show');
-                    $('#observations-tab').tab('show');
-                } else if (itemType === 'analyse') {
-                    fillAnalyseForm(item);
-                    $('#formAnalyse').collapse('show');
-                    $('#analyses-tab').tab('show');
-                }
-
-                // Ajouter un attribut data-edit-id au formulaire pour la mise à jour
-                $(`#${itemType}Form`).attr('data-edit-id', itemId);
-                showAlert('Modification en cours. Modifiez les champs et enregistrez.', 'info');
+                await apiPost('/items', data);
+                showAlert('Analyse créée avec succès', 'success');
+                $('#analyseForm').reset();
+                await loadAnalyses();
+                updateStats();
             } catch (error) {
-                console.error('Erreur lors du chargement de l\'élément:', error);
-                showAlert('Erreur lors du chargement des données', 'danger');
+                console.error('Erreur:', error);
+                showAlert('Erreur lors de la création : ' + error.message, 'danger');
             }
         }
 
-        function fillUtilisateurForm(item) {
-            $('#utilisateurNom').val(getPropertyValue(item, 'hv:nom') || '');
-            $('#utilisateurEmail').val(getPropertyValue(item, 'hv:email') || '');
+        // Méthode CoastObserver : créer item avec média en une seule requête
+        async function createItemWithMedia(data, file) {
+            data['o:media'] = [{
+                'o:ingester': 'upload',
+                'file_index': 0
+            }];
+
+            const formData = new FormData();
+            formData.append('data', JSON.stringify(data));
+            formData.append('file[0]', file, 'observation.webm');
+
+            return await apiPostForm('/items', formData);
         }
 
-        function fillObservationForm(item) {
-            const date = getPropertyValue(item, 'hv:dateObservation');
-            if (date) {
-                $('#observationDate').val(date);
-            }
-            $('#observationSymptome').val(getPropertyValue(item, 'hv:symptome') || '');
-            $('#observationIntensite').val(getPropertyValue(item, 'hv:intensite') || '');
-            $('#observationTranscription').val(getPropertyValue(item, 'hv:transcription') || '');
-            
-            // Récupérer l'ID de l'utilisateur lié
-            const utilisateurProp = item['hv:utilisateur'];
-            if (utilisateurProp && utilisateurProp[0] && utilisateurProp[0]['value_resource_id']) {
-                $('#observationUtilisateur').val(utilisateurProp[0]['value_resource_id']);
-            }
-        }
-
-        function fillAnalyseForm(item) {
-            $('#analyseCategorie').val(getPropertyValue(item, 'hv:categorie') || '');
-            $('#analyseResume').val(getPropertyValue(item, 'hv:resume') || '');
-            $('#analyseRecommandations').val(getPropertyValue(item, 'hv:recommandations') || '');
-            
-            // Récupérer l'ID de l'observation liée
-            const observationProp = item['hv:observe'];
-            if (observationProp && observationProp[0] && observationProp[0]['value_resource_id']) {
-                $('#analyseObservation').val(observationProp[0]['value_resource_id']);
-            }
-        }
-
+        // ===== SUPPRESSION =====
         async function deleteItem(itemId) {
             if (!confirm('Êtes-vous sûr de vouloir supprimer cet élément ?')) {
                 return;
             }
 
             try {
-                const response = await fetch(`${API_BASE_URL}?path=/items/${itemId}`, {
-                    method: 'DELETE',
-                    headers: API_HEADERS
-                });
-
-                if (!response.ok) {
-                    // Même en cas d'erreur, on actualise car la suppression peut avoir réussi
-                    await loadAllData();
-                    throw new Error(`Erreur HTTP: ${response.status}`);
-                }
-
-                await loadAllData();
+                await apiDelete(`/items/${itemId}`);
                 showAlert('Élément supprimé avec succès', 'success');
             } catch (error) {
                 console.error('Erreur lors de la suppression:', error);
-                // Actualiser quand même pour vérifier si l'élément a été supprimé
-                await loadAllData();
-                showAlert('La suppression a peut-être échoué. Vérifiez les données.', 'warning');
-            }
-        }
-
-        // Gestionnaire d'erreur global
-        window.addEventListener('unhandledrejection', function(event) {
-            console.error('Erreur non gérée:', event.reason);
-            showAlert('Une erreur inattendue s\'est produite', 'danger');
-        });
-
-        // ================= Enregistrement audio =================
-        async function startRecording() {
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-                recordedChunks = [];
-                audioBlob = null;
-                mediaRecorder = new MediaRecorder(stream, { mimeType: 'audio/webm' });
-                mediaRecorder.ondataavailable = (e) => {
-                    if (e.data && e.data.size > 0) recordedChunks.push(e.data);
-                };
-                mediaRecorder.onstop = () => {
-                    if (recordedChunks.length) {
-                        audioBlob = new Blob(recordedChunks, { type: 'audio/webm' });
-                        const url = URL.createObjectURL(audioBlob);
-                        const audio = document.getElementById('audioPreview');
-                        audio.src = url;
-                        audio.style.display = 'inline-block';
-                        $('#btnDeleteRec').prop('disabled', false);
-                    }
-                };
-                mediaRecorder.start();
-                $('#btnStartRec').prop('disabled', true);
-                $('#btnStopRec').prop('disabled', false);
-            } catch (err) {
-                console.error('Impossible de démarrer l\'enregistrement:', err);
-                showAlert('Accès au micro refusé ou indisponible', 'danger');
-            }
-        }
-
-        function stopRecording() {
-            try {
-                if (mediaRecorder && mediaRecorder.state !== 'inactive') {
-                    mediaRecorder.stop();
-                    mediaRecorder.stream.getTracks().forEach(t => t.stop());
-                }
+                showAlert('Une erreur a été signalée (' + error.message + '), mais la suppression a peut-être réussi.', 'warning');
             } finally {
-                $('#btnStartRec').prop('disabled', false);
-                $('#btnStopRec').prop('disabled', true);
+                // Actualisation des données dans tous les cas
+                await loadAllData();
             }
         }
 
-        function deleteRecording() {
-            audioBlob = null;
-            recordedChunks = [];
-            const audio = document.getElementById('audioPreview');
-            audio.src = '';
-            audio.style.display = 'none';
-            $('#btnDeleteRec').prop('disabled', true);
+        // ===== MODIFICATION =====
+        async function updateUtilisateur(itemId, titre, nom, email) {
+            try {
+                const { templateId, classId } = await getIdsFor(TEMPLATE_LABELS.utilisateur);
+                const pidTitle = await getPropId('dcterms:title');
+                const pidNom = await getPropId('hv:nom');
+                const pidEmail = await getPropId('hv:email');
+
+                const data = {
+                    'dcterms:title': [{
+                        type: 'literal',
+                        property_id: pidTitle,
+                        '@value': titre
+                    }],
+                    'hv:nom': [{
+                        type: 'literal',
+                        property_id: pidNom,
+                        '@value': nom
+                    }],
+                    'hv:email': [{
+                        type: 'literal',
+                        property_id: pidEmail,
+                        '@value': email
+                    }],
+                    'o:resource_class': { 'o:id': classId },
+                    'o:resource_template': { 'o:id': templateId }
+                };
+
+                await apiPut(`/items/${itemId}`, data);
+                showAlert('Utilisateur modifié avec succès', 'success');
+                refreshPage();
+            } catch (error) {
+                console.error('Erreur:', error);
+                showAlert('Erreur lors de la modification : ' + error.message, 'danger');
+            }
         }
 
-        // Méthode du professeur : créer item avec fichier en une seule requête
-        async function createItemWithFile(data, file) {
-            // Ajouter le descripteur média si un fichier est fourni
-            if (file) {
-                data['o:media'] = [{
-                    'o:ingester': 'upload',
-                    'file_index': '1'
-                }];
+        async function updateObservation(itemId, date, symptome, intensite, transcription, userId, audioFile = null) {
+            try {
+                const { templateId, classId } = await getIdsFor(TEMPLATE_LABELS.observation);
+                const pidTitle = await getPropId('dcterms:title');
+                const pidDate = await getPropId('hv:dateObservation');
+                const pidSymptome = await getPropId('hv:symptome');
+                const pidIntensite = await getPropId('hv:intensite');
+                const pidTranscription = await getPropId('hv:transcription');
+                const pidUser = await getPropId('hv:utilisateur');
+
+                const data = {
+                    'dcterms:title': [{
+                        type: 'literal',
+                        property_id: pidTitle,
+                        '@value': `Observation - ${symptome}`
+                    }],
+                    'hv:dateObservation': [{
+                        type: 'literal',
+                        property_id: pidDate,
+                        '@value': date
+                    }],
+                    'hv:symptome': [{
+                        type: 'literal',
+                        property_id: pidSymptome,
+                        '@value': symptome
+                    }],
+                    'hv:intensite': [{
+                        type: 'literal',
+                        property_id: pidIntensite,
+                        '@value': intensite
+                    }],
+                    'hv:transcription': [{
+                        type: 'literal',
+                        property_id: pidTranscription,
+                        '@value': transcription
+                    }],
+                    'hv:utilisateur': [{
+                        type: 'resource',
+                        property_id: pidUser,
+                        value_resource_id: parseInt(userId)
+                    }],
+                    'o:resource_class': { 'o:id': classId },
+                    'o:resource_template': { 'o:id': templateId }
+                };
+
+                // Si un nouveau fichier audio est fourni, utiliser la méthode avec FormData
+                if (audioFile) {
+                    data['o:media'] = [{
+                        'o:ingester': 'upload',
+                        'file_index': 0
+                    }];
+                    const formData = new FormData();
+                    formData.append('data', JSON.stringify(data));
+                    formData.append('file[0]', audioFile, 'observation.webm');
+                    await apiPostForm(`/items/${itemId}`, formData);
+                } else {
+                    await apiPut(`/items/${itemId}`, data);
+                }
+
+                showAlert('Observation modifiée avec succès', 'success');
+                refreshPage();
+            } catch (error) {
+                console.error('Erreur:', error);
+                showAlert('Erreur lors de la modification : ' + error.message, 'danger');
+            }
+        }
+
+        async function updateAnalyse(itemId, categorie, resume, recommandations, obsId) {
+            try {
+                const { templateId, classId } = await getIdsFor(TEMPLATE_LABELS.analyse);
+                const pidTitle = await getPropId('dcterms:title');
+                const pidCategorie = await getPropId('hv:categorie');
+                const pidResume = await getPropId('hv:resume');
+                const pidReco = await getPropId('hv:recommandations');
+                const pidObserve = await getPropId('hv:observe');
+
+                const data = {
+                    'dcterms:title': [{
+                        type: 'literal',
+                        property_id: pidTitle,
+                        '@value': `Analyse - ${categorie}`
+                    }],
+                    'hv:categorie': [{
+                        type: 'literal',
+                        property_id: pidCategorie,
+                        '@value': categorie
+                    }],
+                    'hv:resume': [{
+                        type: 'literal',
+                        property_id: pidResume,
+                        '@value': resume
+                    }],
+                    'hv:recommandations': [{
+                        type: 'literal',
+                        property_id: pidReco,
+                        '@value': recommandations
+                    }],
+                    'hv:observe': [{
+                        type: 'resource',
+                        property_id: pidObserve,
+                        value_resource_id: parseInt(obsId)
+                    }],
+                    'o:resource_class': { 'o:id': classId },
+                    'o:resource_template': { 'o:id': templateId }
+                };
+
+                await apiPut(`/items/${itemId}`, data);
+                showAlert('Analyse modifiée avec succès', 'success');
+                refreshPage();
+            } catch (error) {
+                console.error('Erreur:', error);
+                showAlert('Erreur lors de la modification : ' + error.message, 'danger');
+            }
+        }
+
+        // ===== ÉVÉNEMENTS =====
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Charger les index templates & propriétés puis les données
+            try {
+                await Promise.all([
+                    loadTemplateIndex(),
+                    loadPropertyIndex()
+                ]);
+            } catch (e) {
+                console.error('Erreur init IDs dynamiques:', e);
+            } finally {
+                loadAllData();
             }
 
-            // Construire FormData avec data JSON + fichier
-            const formData = new FormData();
-            formData.append('data', JSON.stringify(data));
-            if (file) {
-                formData.append('file[1]', file, 'observation.webm');
-            }
+            // Boutons actualiser
+            $('#btnRefresh').addEventListener('click', loadAllData);
+            $('#btnRefreshObs').addEventListener('click', loadAllData);
+            $('#btnRefreshAna').addEventListener('click', loadAllData);
 
-            // Envoyer en une seule requête
-            const response = await fetch(`${API_BASE_URL}?path=/items`, {
-                method: 'POST',
-                body: formData
+            // Formulaires
+            $('#utilisateurForm').addEventListener('submit', handleUtilisateurSubmit);
+            $('#observationForm').addEventListener('submit', handleObservationSubmit);
+            $('#analyseForm').addEventListener('submit', handleAnalyseSubmit);
+
+            // Enregistrement audio
+            $('#btnStartRec').addEventListener('click', startRecording);
+            $('#btnStopRec').addEventListener('click', stopRecording);
+            $('#btnDeleteRec').addEventListener('click', deleteRecording);
+
+            // Délégation d'événements pour les boutons de suppression et modification
+            document.addEventListener('click', function(e) {
+                if (e.target.closest('.btn-delete')) {
+                    const itemId = e.target.closest('.btn-delete').dataset.itemId;
+                    deleteItem(itemId);
+                }
+                
+                // Bouton modifier utilisateur
+                if (e.target.closest('.btn-edit-user')) {
+                    const btn = e.target.closest('.btn-edit-user');
+                    $('#editUserId').value = btn.dataset.itemId;
+                    $('#editUserTitre').value = btn.dataset.titre;
+                    $('#editUserNom').value = btn.dataset.nom;
+                    $('#editUserEmail').value = btn.dataset.email;
+                    
+                    const modal = new bootstrap.Modal($('#modalEditUser'));
+                    modal.show();
+                }
+                
+                // Bouton modifier observation
+                if (e.target.closest('.btn-edit-obs')) {
+                    const btn = e.target.closest('.btn-edit-obs');
+                    $('#editObsId').value = btn.dataset.itemId;
+                    
+                    // Convertir la date au format datetime-local
+                    const dateStr = btn.dataset.date;
+                    if (dateStr && dateStr !== 'N/A') {
+                        try {
+                            const date = new Date(dateStr);
+                            const year = date.getFullYear();
+                            const month = String(date.getMonth() + 1).padStart(2, '0');
+                            const day = String(date.getDate()).padStart(2, '0');
+                            const hours = String(date.getHours()).padStart(2, '0');
+                            const minutes = String(date.getMinutes()).padStart(2, '0');
+                            $('#editObsDate').value = `${year}-${month}-${day}T${hours}:${minutes}`;
+                        } catch (e) {
+                            $('#editObsDate').value = '';
+                        }
+                    }
+                    
+                    $('#editObsSymptome').value = btn.dataset.symptome;
+                    $('#editObsIntensite').value = btn.dataset.intensite;
+                    $('#editObsTranscription').value = btn.dataset.transcription;
+                    $('#editObsUtilisateur').value = btn.dataset.userId;
+                    
+                    // Afficher info si audio existant
+                    const hasAudio = btn.dataset.hasAudio === 'true';
+                    if (hasAudio) {
+                        $('#editAudioInfo').style.display = 'block';
+                    } else {
+                        $('#editAudioInfo').style.display = 'none';
+                    }
+                    
+                    // Réinitialiser l'audio d'édition
+                    editRecordedBlob = null;
+                    const editAudioPreview = $('#editAudioPreview');
+                    editAudioPreview.removeAttribute('src');
+                    editAudioPreview.style.display = 'none';
+                    $('#btnEditDeleteRec').disabled = true;
+                    
+                    // Peupler le select des utilisateurs
+                    populateEditUserSelect();
+                    
+                    const modal = new bootstrap.Modal($('#modalEditObs'));
+                    modal.show();
+                }
+                
+                // Bouton modifier analyse
+                if (e.target.closest('.btn-edit-analyse')) {
+                    const btn = e.target.closest('.btn-edit-analyse');
+                    $('#editAnalyseId').value = btn.dataset.itemId;
+                    $('#editAnalyseCategorie').value = btn.dataset.categorie;
+                    $('#editAnalyseResume').value = btn.dataset.resume;
+                    $('#editAnalyseRecommandations').value = btn.dataset.recommandations;
+                    $('#editAnalyseObservation').value = btn.dataset.obsId;
+                    
+                    // Peupler le select des observations
+                    populateEditObservationSelect();
+                    
+                    const modal = new bootstrap.Modal($('#modalEditAnalyse'));
+                    modal.show();
+                }
             });
 
-            if (!response.ok) {
-                const errorText = await response.text();
-                throw new Error(`Création item échouée: ${response.status} ${errorText}`);
-            }
+            // Gestionnaires pour les boutons de sauvegarde dans les modals
+            $('#btnSaveUser').addEventListener('click', function() {
+                const itemId = $('#editUserId').value;
+                const titre = $('#editUserTitre').value;
+                const nom = $('#editUserNom').value;
+                const email = $('#editUserEmail').value;
+                
+                if (titre && nom && email) {
+                    updateUtilisateur(itemId, titre, nom, email);
+                    bootstrap.Modal.getInstance($('#modalEditUser')).hide();
+                }
+            });
 
-            return await response.json();
-        }
+            $('#btnSaveObs').addEventListener('click', function() {
+                const itemId = $('#editObsId').value;
+                const date = $('#editObsDate').value;
+                const symptome = $('#editObsSymptome').value;
+                const intensite = $('#editObsIntensite').value;
+                const transcription = $('#editObsTranscription').value;
+                const userId = $('#editObsUtilisateur').value;
+                
+                if (date && symptome && intensite && transcription && userId) {
+                    updateObservation(itemId, date, symptome, intensite, transcription, userId, editRecordedBlob);
+                    bootstrap.Modal.getInstance($('#modalEditObs')).hide();
+                }
+            });
+
+            // Gestionnaires pour l'enregistrement audio dans le modal d'édition
+            $('#btnEditStartRec').addEventListener('click', startEditRecording);
+            $('#btnEditStopRec').addEventListener('click', stopEditRecording);
+            $('#btnEditDeleteRec').addEventListener('click', deleteEditRecording);
+
+            $('#btnSaveAnalyse').addEventListener('click', function() {
+                const itemId = $('#editAnalyseId').value;
+                const categorie = $('#editAnalyseCategorie').value;
+                const resume = $('#editAnalyseResume').value;
+                const recommandations = $('#editAnalyseRecommandations').value;
+                const obsId = $('#editAnalyseObservation').value;
+                
+                if (categorie && resume && recommandations && obsId) {
+                    updateAnalyse(itemId, categorie, resume, recommandations, obsId);
+                    bootstrap.Modal.getInstance($('#modalEditAnalyse')).hide();
+                }
+            });
+        });
     </script>
 </body>
 </html>
