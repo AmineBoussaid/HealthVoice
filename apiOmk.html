@@ -893,6 +893,27 @@
             'hv': 'https://jardindesconnaissances.univ-paris8.fr/onto/hv#'
         };
 
+        // ===== CONFIGURATION OLLAMA (IA) =====
+        const OLLAMA_API_URL = 'http://localhost:11434/api/generate';
+        const OLLAMA_MODEL = 'gpt-oss:120b-cloud'; // Vous pouvez changer: mistral, gemma, etc.
+        let isOllamaAvailable = false;
+
+        // Vérifier si Ollama est disponible
+        async function checkOllamaAvailability() {
+            try {
+                const response = await fetch('http://localhost:11434/api/tags');
+                if (response.ok) {
+                    isOllamaAvailable = true;
+                    console.log('✓ Ollama est disponible');
+                    return true;
+                }
+            } catch (e) {
+                console.warn('⚠ Ollama non disponible. Les analyses automatiques seront désactivées.');
+            }
+            isOllamaAvailable = false;
+            return false;
+        }
+
         // Fonction pour construire l'URL API avec les clés en paramètres GET
         function buildApiUrl(path) {
             const base = OMEKA_API_URL.trim().replace(/\/+$/, '');
@@ -970,6 +991,87 @@
             return data;
         }
 
+        // ===== GÉNÉRATION D'ANALYSE VIA IA =====
+        async function generateAnalysisWithOllama(symptome, intensite, transcription) {
+            if (!isOllamaAvailable) {
+                console.warn('Ollama non disponible, analyse manuelle nécessaire');
+                return null;
+            }
+
+            const prompt = `Tu es un assistant médical expert. Analyse les symptômes suivants et fournis une analyse structurée.
+
+Symptôme: ${symptome}
+Intensité: ${intensite}
+Description du patient: ${transcription}
+
+Fournis ta réponse au format JSON strict suivant (ne retourne QUE le JSON, sans texte avant ou après):
+{
+  "categorie": "Respiratoire|Cardiovasculaire|Neurologique|Digestif|Général|Autre",
+  "resume": "Un résumé concis des symptômes observés (2-3 phrases)",
+  "recommandations": "Des recommandations médicales appropriées (2-3 phrases)"
+}
+
+Important: 
+- Choisis UNE SEULE catégorie parmi: Respiratoire, Cardiovasculaire, Neurologique, Digestif, Général, Autre
+- Sois concis et professionnel
+- Base-toi uniquement sur les informations fournies
+- Ne retourne QUE le JSON, rien d'autre`;
+
+            try {
+                showAlert('🤖 Génération de l\'analyse en cours...', 'info');
+                
+                const response = await fetch(OLLAMA_API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        model: OLLAMA_MODEL,
+                        prompt: prompt,
+                        stream: false,
+                        options: {
+                            temperature: 0.3,
+                            top_p: 0.9
+                        }
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Erreur API Ollama: ' + response.status);
+                }
+
+                const data = await response.json();
+                const responseText = data.response.trim();
+                
+                console.log('Réponse brute Ollama:', responseText);
+                
+                // Extraire le JSON de la réponse
+                let jsonMatch = responseText.match(/\{[\s\S]*\}/);
+                if (!jsonMatch) {
+                    throw new Error('Pas de JSON trouvé dans la réponse');
+                }
+                
+                const analysis = JSON.parse(jsonMatch[0]);
+                
+                // Valider les champs requis
+                if (!analysis.categorie || !analysis.resume || !analysis.recommandations) {
+                    throw new Error('JSON incomplet');
+                }
+                
+                // Valider la catégorie
+                const validCategories = ['Respiratoire', 'Cardiovasculaire', 'Neurologique', 'Digestif', 'Général', 'Autre'];
+                if (!validCategories.includes(analysis.categorie)) {
+                    analysis.categorie = 'Autre';
+                }
+                
+                console.log('Analyse générée:', analysis);
+                return analysis;
+                
+            } catch (error) {
+                console.error('Erreur génération analyse:', error);
+                showAlert('⚠ Erreur lors de la génération automatique: ' + error.message, 'warning');
+                return null;
+            }
+        }
+
         // ===== RAFRAÎCHISSEMENT GLOBAL =====
         function refreshPage(delay = 800) {
             // Laisser le temps à l'alerte de s'afficher avant reload
@@ -1007,32 +1109,70 @@
         let editRecognition = null;
 
         function initSpeechRecognition(targetInputId) {
-            if ('webkitSpeechRecognition' in window) {
-                const rec = new webkitSpeechRecognition();
+            if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+                const SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+                const rec = new SpeechRecognition();
                 rec.continuous = true;
-                rec.interimResults = false; // On ne garde que les résultats finaux pour simplifier
+                rec.interimResults = true; // Afficher les résultats intermédiaires pour un meilleur feedback
                 rec.lang = 'fr-FR';
 
+                rec.onstart = function() {
+                    console.log('Reconnaissance vocale démarrée');
+                    showAlert('🎤 Reconnaissance vocale activée - Parlez maintenant', 'info');
+                };
+
                 rec.onresult = function(event) {
+                    let interimTranscript = '';
                     let finalTranscript = '';
+                    
                     for (let i = event.resultIndex; i < event.results.length; ++i) {
+                        const transcript = event.results[i][0].transcript;
                         if (event.results[i].isFinal) {
-                            finalTranscript += event.results[i][0].transcript;
+                            finalTranscript += transcript + ' ';
+                        } else {
+                            interimTranscript += transcript;
                         }
                     }
+                    
+                    const input = $(targetInputId);
                     if (finalTranscript) {
-                        const input = $(targetInputId);
-                        const separator = input.value && !input.value.endsWith(' ') ? ' ' : '';
-                        input.value += separator + finalTranscript;
+                        // Ajouter le texte final à la fin du contenu existant
+                        const currentValue = input.value.trim();
+                        const separator = currentValue ? ' ' : '';
+                        input.value = currentValue + separator + finalTranscript.trim();
+                        console.log('Transcription ajoutée:', finalTranscript);
                     }
                 };
 
                 rec.onerror = function(event) {
-                    console.error('Speech recognition error', event.error);
+                    console.error('Erreur de reconnaissance vocale:', event.error);
+                    let errorMessage = 'Erreur de reconnaissance vocale: ';
+                    switch(event.error) {
+                        case 'no-speech':
+                            errorMessage += 'Aucune parole détectée';
+                            break;
+                        case 'audio-capture':
+                            errorMessage += 'Microphone non accessible';
+                            break;
+                        case 'not-allowed':
+                            errorMessage += 'Permission refusée. Autorisez le microphone.';
+                            break;
+                        case 'network':
+                            errorMessage += 'Erreur réseau';
+                            break;
+                        default:
+                            errorMessage += event.error;
+                    }
+                    showAlert(errorMessage, 'warning');
+                };
+
+                rec.onend = function() {
+                    console.log('Reconnaissance vocale terminée');
                 };
 
                 return rec;
             } else {
+                showAlert('❌ La reconnaissance vocale n\'est pas supportée par votre navigateur. Utilisez Chrome ou Edge.', 'danger');
                 console.warn('Web Speech API not supported');
                 return null;
             }
@@ -1118,7 +1258,13 @@
                 // Démarrer la reconnaissance vocale
                 recognition = initSpeechRecognition('#observationTranscription');
                 if (recognition) {
-                    recognition.start();
+                    try {
+                        recognition.start();
+                        console.log('Reconnaissance vocale initialisée');
+                    } catch (e) {
+                        console.error('Erreur démarrage reconnaissance:', e);
+                        showAlert('Reconnaissance vocale non disponible: ' + e.message, 'warning');
+                    }
                 }
 
                 mediaRecorder = new MediaRecorder(stream, { mimeType: 'audio/webm' });
@@ -1145,7 +1291,9 @@
                 mediaRecorder.start();
                 $('#btnStartRec').disabled = true;
                 $('#btnStopRec').disabled = false;
+                showAlert('🎙️ Enregistrement démarré', 'success');
             } catch (err) {
+                console.error('Erreur startRecording:', err);
                 showAlert("Impossible d'accéder au micro : " + err.message, 'danger');
             }
         }
@@ -1182,7 +1330,13 @@
                 // Démarrer la reconnaissance vocale pour l'édition
                 editRecognition = initSpeechRecognition('#editObsTranscription');
                 if (editRecognition) {
-                    editRecognition.start();
+                    try {
+                        editRecognition.start();
+                        console.log('Reconnaissance vocale (édition) initialisée');
+                    } catch (e) {
+                        console.error('Erreur démarrage reconnaissance (édition):', e);
+                        showAlert('Reconnaissance vocale non disponible: ' + e.message, 'warning');
+                    }
                 }
 
                 editMediaRecorder = new MediaRecorder(stream, { mimeType: 'audio/webm' });
@@ -1671,16 +1825,38 @@
                 };
 
                 // Méthode CoastObserver: créer item avec fichier en une seule requête
+                let newObservation;
                 if (recordedBlob) {
-                    await createItemWithMedia(data, recordedBlob);
+                    newObservation = await createItemWithMedia(data, recordedBlob);
                 } else {
-                    await apiPost('/items', data);
+                    newObservation = await apiPost('/items', data);
                 }
 
-                showAlert('Observation créée avec succès', 'success');
+                showAlert('✓ Observation créée avec succès', 'success');
+                
+                // Générer automatiquement une analyse si Ollama est disponible
+                if (isOllamaAvailable && newObservation && newObservation['o:id']) {
+                    try {
+                        const symptome = $('#observationSymptome').value;
+                        const intensite = $('#observationIntensite').value;
+                        const transcription = $('#observationTranscription').value;
+                        
+                        const analysis = await generateAnalysisWithOllama(symptome, intensite, transcription);
+                        
+                        if (analysis) {
+                            // Créer automatiquement l'analyse
+                            await createAutoAnalyse(newObservation['o:id'], analysis);
+                        }
+                    } catch (error) {
+                        console.error('Erreur création auto analyse:', error);
+                        showAlert('⚠ Observation créée mais erreur lors de la génération de l\'analyse', 'warning');
+                    }
+                }
+                
                 $('#observationForm').reset();
                 deleteRecording();
                 await loadObservations();
+                await loadAnalyses();
                 updateStats();
                 populateObservationSelects();
             } catch (error) {
@@ -1759,6 +1935,55 @@
             formData.append('file[0]', file, 'observation.webm');
 
             return await apiPostForm('/items', formData);
+        }
+
+        // Créer automatiquement une analyse à partir d'une observation
+        async function createAutoAnalyse(observationId, analysis) {
+            try {
+                const { templateId, classId } = await getIdsFor(TEMPLATE_LABELS.analyse);
+                const pidTitle = await getPropId('dcterms:title');
+                const pidCategorie = await getPropId('hv:categorie');
+                const pidResume = await getPropId('hv:resume');
+                const pidReco = await getPropId('hv:recommandations');
+                const pidObserve = await getPropId('hv:observe');
+
+                const data = {
+                    'dcterms:title': [{
+                        type: 'literal',
+                        property_id: pidTitle,
+                        '@value': `Analyse Automatique - ${analysis.categorie}`
+                    }],
+                    'hv:categorie': [{
+                        type: 'literal',
+                        property_id: pidCategorie,
+                        '@value': analysis.categorie
+                    }],
+                    'hv:resume': [{
+                        type: 'literal',
+                        property_id: pidResume,
+                        '@value': analysis.resume
+                    }],
+                    'hv:recommandations': [{
+                        type: 'literal',
+                        property_id: pidReco,
+                        '@value': analysis.recommandations
+                    }],
+                    'hv:observe': [{
+                        type: 'resource',
+                        property_id: pidObserve,
+                        value_resource_id: parseInt(observationId)
+                    }],
+                    'o:resource_class': { 'o:id': classId },
+                    'o:resource_template': { 'o:id': templateId }
+                };
+
+                await apiPost('/items', data);
+                showAlert('🤖 Analyse automatique générée avec succès!', 'success');
+                console.log('Analyse auto-créée pour observation:', observationId);
+            } catch (error) {
+                console.error('Erreur création auto analyse:', error);
+                throw error;
+            }
         }
 
         // ===== SUPPRESSION =====
@@ -1956,6 +2181,9 @@
 
         // ===== ÉVÉNEMENTS =====
         document.addEventListener('DOMContentLoaded', async function() {
+            // Vérifier la disponibilité d'Ollama
+            await checkOllamaAvailability();
+            
             // Charger les index templates & propriétés puis les données
             try {
                 await Promise.all([
