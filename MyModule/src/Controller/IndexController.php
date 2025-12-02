@@ -18,7 +18,7 @@ class IndexController extends AbstractActionController
         // Récupérer les configurations
         $ollamaEnabled = $settings->get('healthvoice_ollama_enabled', false);
         $ollamaApiUrl = $settings->get('healthvoice_ollama_api_url', 'http://localhost:11434/api/generate');
-        $ollamaModel = $settings->get('healthvoice_ollama_model', 'llama2');
+        $ollamaModel = $settings->get('healthvoice_ollama_model', 'llama3');
         $ollamaLanguage = $settings->get('healthvoice_ollama_language', 'fr');
         $ollamaPrompt = $settings->get('healthvoice_ollama_prompt', 'En tant que médecin, analysez les symptômes suivants et fournissez des recommandations médicales : {transcription}');
         $ollamaTemperature = $settings->get('healthvoice_ollama_temperature', '0.7');
