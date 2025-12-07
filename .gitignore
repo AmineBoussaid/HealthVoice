@@ -1,0 +1,11 @@
+# Modules / Répertoires à ignorer
+MedecinAI/
+MyModule/
+
+# HTML files
+test-ollama.html
+diagnostic-templates.html
+test-speech-recognition.html
+
+# Markdown
+INSTALLATION_OLLAMA.md
